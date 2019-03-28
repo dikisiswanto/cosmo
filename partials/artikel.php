@@ -31,12 +31,18 @@
 							</div>
 							<?php if($single_artikel['gambar'] != '' && is_file(LOKASI_FOTO_ARTIKEL.'sedang_'.$single_artikel['gambar'])) : ?>
 							<figure class="foto-artikel">
+								<a href="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" data-fancybox="images">
 								<img src="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" alt="<?= $single_artikel['judul'] ?>" class="img-fluid">
+								</a>
 							</figure>
 							<?php endif ?>
 							<article>
 								<?= $single_artikel['isi'] ?>
-							</article>	
+							</article>
+							<div id="share" class="my-5 mx-auto text-center"></div>
+							<section class="komentar py-4">
+								<?php $this->load->view($folder_themes .'/partials/komentar') ?>
+							</section>	
 						</div>
 					</div>
 					<aside class="col-lg-4 justify-content-end">
@@ -50,3 +56,8 @@
 	</main>
 </section>
 <?= $this->load->view($folder_themes .'/commons/footer') ?>
+<script>
+		$("#share").jsSocials({
+				shares: ["email", "twitter", "facebook", "googleplus", "line", "whatsapp"]
+		});
+</script>

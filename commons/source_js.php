@@ -6,6 +6,7 @@
 <script src="<?= base_url("$folder_themes/vendor/owl-carousel/js/owl.carousel.min.js") ?>"></script>
 <script src="<?= base_url("$folder_themes/vendor/ace-menu/js/ace-responsive-menu.min.js") ?>"></script>
 <script src="<?= base_url("$folder_themes/vendor/fancybox/js/jquery.fancybox.min.js") ?>"></script>
+<script src="<?= base_url("$folder_themes/vendor/jssocial/js/jssocials.min.js") ?>"></script>
 <script src="<?= base_url("assets/js/jquery.cycle2.min.js") ?>"></script>
 <script src="<?= base_url("assets/js/jquery.cycle2.carousel.js") ?>"></script>
 <script src="<?= base_url("assets/js/leaflet.js")?>"></script>
