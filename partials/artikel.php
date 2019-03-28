@@ -39,6 +39,45 @@
 							<article>
 								<?= $single_artikel['isi'] ?>
 							</article>
+
+							<?php if($single_artikel['dokumen'] && $single_artikel['dokumen'] != NULL) : ?>
+								<div class="py-2 pl-4 mt-5 bg-light align-middle d-flex align-items-center" style="border-left: 3px solid teal">
+									<h4 class="h5 font-weight-bold m-0">Dokumen Lampiran</h4>
+									<span class="px-3">:</span>
+									<div><a class="d-inline-block" href="<?= base_url(LOKASI_DOKUMEN.$single_artikel['dokumen']) ?>"><?= $single_artikel['link_dokumen'] ?></a></div>
+								</div>
+							<?php endif ?>
+
+							<?php if($single_artikel['gambar1'] && $single_artikel['gambar1'] != NULL) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+									<figure class="foto-artikel">
+										<a href="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
+											<img src="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-3" title="<?= $single_artikel['nama'] ?>">
+										</a>
+									</figure>
+								<?php endif ?>
+							<?php endif ?>
+
+							<?php if($single_artikel['gambar2'] && $single_artikel['gambar2'] != NULL) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+									<figure class="foto-artikel">
+										<a href="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
+											<img src="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">
+										</a>
+									</figure>
+								<?php endif ?>
+							<?php endif ?>
+
+							<?php if($single_artikel['gambar3'] && $single_artikel['gambar3'] != NULL) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+									<figure class="foto-artikel">
+										<a href="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
+											<img src="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">
+										</a>
+									</figure>
+								<?php endif ?>
+							<?php endif ?>
+
 							<div id="share" class="my-5 mx-auto text-center"></div>
 							<section class="komentar py-4">
 								<?php $this->load->view($folder_themes .'/partials/komentar') ?>

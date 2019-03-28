@@ -685,6 +685,9 @@ article {
 	color: #555;
 	word-wrap: break-word;
 }
+#form-komentar table tr td {
+	margin-bottom: 10px;
+}
 
 /* Kustomisasi Widget */
 aside {

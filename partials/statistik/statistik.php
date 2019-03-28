@@ -100,7 +100,7 @@ $(function(){
 						<?php $jenis_btn = ($tipe==1) ? "btn-primary":"btn-default"; ?>
 						<a href="<?= site_url('first/statistik/'.$st.'/1') ?>" class="btn btn-sm <?= $jenis_btn ?>">Bar Graph</a>
 						<?php $jenis_btn = ($tipe==0) ? "btn-primary":"btn-default"; ?>
-						<a href="<?= site_url('first/statistik/'.$st.'/0') ?>" class="btn btn-sm <?= $jenis_btn ?>">Pie Cart</a>
+						<a href="<?= site_url('first/statistik/'.$st.'/0') ?>" class="btn btn-sm <?= $jenis_btn ?>">Pie Chart</a>
 					</div>
 				</div>
 			</div>

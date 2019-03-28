@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="<?= base_url("$folder_themes/assets/css/animate.min.css") ?>">
 <link rel="stylesheet" href="<?= base_url("$folder_themes/assets/css/loader.min.css") ?>">
 <link rel="stylesheet" href="<?= base_url("$folder_themes/assets/css/comments.min.css") ?>">
-<link rel="stylesheet" href="<?= base_url("$folder_themes/assets/css/style.css") ?>">
+<link rel="stylesheet" href="<?= base_url("$folder_themes/assets/css/style.min.css") ?>">
 <?php if (is_file("desa/css/$this->theme/desa-web.css")): ?>
 	 <!-- Extra CSS untuk tema cosmos. Timpa aturan css di berkas ini. -->
 	<link rel="stylesheet" href="<?php echo base_url("desa/css/$this->theme/desa-web.css"); ?>">
