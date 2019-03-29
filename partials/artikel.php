@@ -49,7 +49,7 @@
 							<?php endif ?>
 
 							<?php if($single_artikel['gambar1'] && $single_artikel['gambar1'] != NULL) : ?>
-								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar1'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
 											<img src="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-3" title="<?= $single_artikel['nama'] ?>">
@@ -59,7 +59,7 @@
 							<?php endif ?>
 
 							<?php if($single_artikel['gambar2'] && $single_artikel['gambar2'] != NULL) : ?>
-								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar2'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
 											<img src="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">
@@ -69,7 +69,7 @@
 							<?php endif ?>
 
 							<?php if($single_artikel['gambar3'] && $single_artikel['gambar3'] != NULL) : ?>
-								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar'])) : ?>
+								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar3'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
 											<img src="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">

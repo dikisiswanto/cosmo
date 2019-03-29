@@ -136,7 +136,7 @@
 						</span>
 				</div>
 				<div class="galeri-wrapper">
-					<?php foreach($w_gal as $data) : ?>
+					<?php foreach(array_slice($w_gal, 0, 8) as $data) : ?>
 						<?php if(is_file(LOKASI_GALERI . "kecil_" . $data['gambar'])) : ?>
 							<?php $link = site_url('first/sub_gallery/'.$data['id']) ?>
 							<a href="<?= $link ?>" class="item-foto">
