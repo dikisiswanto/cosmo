@@ -44,34 +44,45 @@
 			<?php endif; ?>
 			<div class="box-body py-3 px-3">
 				<form id="form-komentar" name="form" action="<?= site_url('first/add_comment/'.$single_artikel['id'])?>" method="POST" onSubmit="return validasi(this);">
-					<div class='form-group'>
-						<label>Nama<span class="text-danger">*</span></label>
-						<input class="form-control input-sm" type="text" required name="owner" maxlength="30" value="<?= !empty($_SESSION['post']['owner']) ? $_SESSION['post']['owner'] : $_SESSION['nama'] ?>">
-					</div>
-					<div class="form-group">
-						<label>No. HP<span class="text-danger">*</span></label>
-						<input class="form-control input-sm" type="text" placeholder="" name="no_hp" maxlength="30" value="<?= $_SESSION['post']['no_hp']; ?>">
-					</div>
-					<div class="form-group">
-						<label>Alamat E-mail (opsional)</label>
-						<input class="form-control input-sm" type="text" placeholder="" name="email" maxlength="30" value="<?= $_SESSION['post']['email']; ?>">
-					</div>
-					<div class="form-group">
-						<label>Komentar<span class="text-danger">*</span></label>
-						<textarea class="form-control input-sm" required name="komentar"><?= $_SESSION['post']['komentar'] ?></textarea>
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-sm-4">
-								<img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image"/>
-							</div>
-							<div class="col-sm-4">
-								<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>'+Math.random(); return false"><small>[ Ganti Gambar ]</small></a>
-								<div><input class="form-control input-sm" type="text" required name="captcha_code" maxlength="6" value="<?= $_SESSION['post']['captcha_code'] ?>"/> Isikan kode di gambar</div>
-							</div>
+					<div class="form-group row">
+						<label class="col-lg-3 col-form-label">Nama<span class="text-danger">*</span></label>
+						<div class="col-lg-9">
+							<input class="form-control input-sm" type="text" required name="owner" maxlength="30" value="<?= !empty($_SESSION['post']['owner']) ? $_SESSION['post']['owner'] : $_SESSION['nama'] ?>">
 						</div>
 					</div>
-					<button class="btn btn-info btn-md" type="submit"><i class="fa fa-paper-plane"></i> KIRIM KOMENTAR</button>
+					<div class="form-group row">
+						<label class="col-lg-3 col-form-label">No. HP<span class="text-danger">*</span></label>
+						<div class="col-lg-9">
+							<input class="form-control input-sm" type="text" required placeholder="" name="no_hp" maxlength="30" value="<?= $_SESSION['post']['no_hp']; ?>">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-lg-3 col-form-label">Alamat email</label>
+						<div class="col-lg-9">
+							<input class="form-control input-sm" type="text" placeholder="" name="email" maxlength="30" value="<?= $_SESSION['post']['email']; ?>">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-lg-3 col-form-label">Komentar<span class="text-danger">*</span></label>
+						<div class="col-lg-9">
+							<textarea class="form-control input-sm" required name="komentar"><?= $_SESSION['post']['komentar'] ?></textarea>
+						</div>
+					</div>
+					<div class="offset-lg-3">
+						<img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image"/ class="img-fluid">
+					</div>
+					<div class="offset-lg-3">
+						<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>'+Math.random(); return false"><small>[ Ganti Gambar ]</small></a>
+					</div>
+					<div class="offset-lg-3">
+						<input class="form-control input-sm" type="text" required name="captcha_code" maxlength="6" value="<?= $_SESSION['post']['captcha_code'] ?>"/>
+						<small class="d-block">
+							Isikan kode di gambar
+						</small>
+					</div>
+					<div class="offset-lg-3 mt-3">
+						<button class="btn btn-info btn-md" type="submit"><i class="fa fa-paper-plane"></i> KIRIM KOMENTAR</button>
+					</div>
 				</form>
 			</div>
 		</div>
