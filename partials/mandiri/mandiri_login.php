@@ -45,7 +45,7 @@
 									<div class="form-group">
 										<input type="password" class="form-control" placeholder="PIN" name="pin">
 									</div>
-									<button class="btn btn-secondary mt-2">
+									<button class="btn btn-info mt-2">
 										<i class="fa fa-send"></i> MASUK
 									</button>
 								<?php endif ?>

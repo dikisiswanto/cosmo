@@ -68,25 +68,33 @@
 							<textarea class="form-control input-sm" required name="komentar"><?= $_SESSION['post']['komentar'] ?></textarea>
 						</div>
 					</div>
-					<div class="offset-lg-3">
-						<img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image"/ class="img-fluid">
+					<div class="row">
+						<div class="offset-lg-3 col-lg-9">
+							<img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image"/ class="img-fluid border border-black">
+						</div>
 					</div>
-					<div class="offset-lg-3">
-						<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>'+Math.random(); return false"><small>[ Ganti Gambar ]</small></a>
+					<div class="row mb-2">
+						<div class="offset-lg-3 col-lg-9">
+							<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>'+Math.random(); return false"><small>[ Ganti Gambar ]</small></a>
+						</div>
 					</div>
-					<div class="offset-lg-3">
-						<input class="form-control input-sm" type="text" required name="captcha_code" maxlength="6" value="<?= $_SESSION['post']['captcha_code'] ?>"/>
-						<small class="d-block">
-							Isikan kode di gambar
-						</small>
+					<div class="row">
+						<div class="offset-lg-3 col-lg-9">
+							<input class="form-control input-sm" type="text" required name="captcha_code" maxlength="6" value="<?= $_SESSION['post']['captcha_code'] ?>"/>
+							<span class="d-block">
+								Isikan kode di gambar
+							</span>
+						</div>
 					</div>
-					<div class="offset-lg-3 mt-3">
-						<button class="btn btn-info btn-md" type="submit"><i class="fa fa-paper-plane"></i> KIRIM KOMENTAR</button>
+					<div class="row">
+						<div class="offset-lg-3 mt-3 col-lg-10">
+							<button class="btn btn-info btn-md" type="submit"><i class="fa fa-paper-plane"></i> KIRIM KOMENTAR</button>
+						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	<?php else: ?>
-		<span class="d-block bg-warning p-2">Komentar untuk artikel ini telah ditutup.</span>
+		<span class="d-block alert alert-warning px-2 py-3"><i class="fa fa-exclamation-triangle pl-1 pr-2"></i> Komentar untuk artikel ini telah ditutup.</span>
 	<?php endif; ?>
 </div>
