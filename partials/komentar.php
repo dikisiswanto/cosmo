@@ -66,7 +66,7 @@
 								<img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image"/>
 							</div>
 							<div class="col-sm-4">
-								<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>+ Math.random()'; return false"><small>[ Ganti Gambar ]</small></a>
+								<a href="#!" onclick="document.getElementById('captcha').src = '<?= base_url("securimage/securimage_show.php?")?>'+Math.random(); return false"><small>[ Ganti Gambar ]</small></a>
 								<div><input class="form-control input-sm" type="text" required name="captcha_code" maxlength="6" value="<?= $_SESSION['post']['captcha_code'] ?>"/> Isikan kode di gambar</div>
 							</div>
 						</div>
