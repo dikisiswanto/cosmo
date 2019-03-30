@@ -1,5 +1,4 @@
 # OpenSID-Cosmos
-[![GitHub All Releases](https://img.shields.io/github/downloads/dikisiswanto/OpenSID-Cosmos/total.svg)](#!)
 [![GitHub release](https://img.shields.io/github/release/dikisiswanto/OpenSID-Cosmos.svg)](#!)
 [![GitHub](https://img.shields.io/github/license/dikisiswanto/OpenSID-Cosmos.svg)](#!)
 
