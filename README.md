@@ -11,7 +11,7 @@ Berikut tangkapan layar dari tampilan halaman depan tema **cosmos**
 
 Tampilan laman artikel tema **cosmos**
 
-![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/50fpGcN2/laman-artikel.png)
+![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/nzTn6QB9/laman-artikel.png)
 
 ## Demo
 
