@@ -33,8 +33,8 @@ Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalu
 Suka dengan tampilan tema **cosmos**? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
 
 <div style="display:flex; align-items:center !important; justify-content: flex-start">
-<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="120" style="padding-right: 10px">
-<span>040301025629504 a/n Diki Siswanto</span>
+<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="120" hight="40px" style="padding-right: 10px">
+<div>040301025629504 a/n Diki Siswanto</div>
 </div>	
 
 
