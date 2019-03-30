@@ -4,16 +4,18 @@
 
 ## Tampilan Tema Cosmos
 
-####### Berikut tangkapan layar dari tampilan halaman depan tema **cosmos**
+Berikut tangkapan layar dari tampilan halaman depan tema **cosmos**
+
 ![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/DwsgwfSz/laman-beranda.png)
 ![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/zXHwxDSk/laman-beranda2.png)
 
-####### Tampilan laman artikel tema **cosmos**
+Tampilan laman artikel tema **cosmos**
+
 ![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/50fpGcN2/laman-artikel.png)
 
 ## Demo
 
-Untuk melihat langsung penampilan tema Cosmos, silakan menuju [Link Demo](https://cosmos.celebiz.net)
+Untuk melihat langsung penampilan tema **cosmos**, silakan menuju [Link Demo](https://cosmos.celebiz.net)
 
 ## Instalasi
 
@@ -24,14 +26,17 @@ Untuk melihat langsung penampilan tema Cosmos, silakan menuju [Link Demo](https:
 
 ## Kontribusi
 
-Jika menemukan masalah atau bug pada tema `cosmos` silakan buat *issue* melalui laman [Issues](https://github.com/dikisiswanto/OpenSID-Cosmos/issues) dan ceritakan masalah atau bug yang ditemukan.
+Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalui laman [Issues](https://github.com/dikisiswanto/OpenSID-Cosmos/issues) dan ceritakan masalah atau *bug* yang ditemukan.
 
 ## Donasi
 
-Suka dengan tampilan tema `cosmos`? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
+Suka dengan tampilan tema **cosmos**? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
 
-<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="20">	
-040301025629504 A/N Diki Siswanto
+<div style="display:flex;">
+<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="20">
+<span>040301025629504 A/N Diki Siswanto</span>
+</div>	
+
 
 ## Bantuan
 
