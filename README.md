@@ -1,6 +1,6 @@
 # OpenSID-Cosmos
 
-**Cosmos** adalah tema atau tampilan modul web dari aplikasi OpenSID yang responsif, modern, dan terintegrasi. Dibangun dengan berbasiskan *framework* Bootstrap 4 yang lebih fleksibel dan mudah dikostumisasi. Tema ini juga memakai beberapa plugin pendukung yang membuat penampilan dari web desa yang menggunakan aplikasi OpenSID makin ciamik.
+**Cosmos** adalah tema atau tampilan modul web dari aplikasi OpenSID yang responsif, modern, dan terintegrasi. Dibangun dengan basis *framework* Bootstrap 4 yang lebih fleksibel dan mudah dikostumisasi. Tema ini juga memakai beberapa plugin pendukung yang membuat penampilan dari web desa yang menggunakan tema ini makin ciamik.
 
 ## Tampilan Tema Cosmos
 
@@ -32,8 +32,8 @@ Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalu
 
 Suka dengan tampilan tema **cosmos**? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
 
-<div style="display:flex;">
-<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="100">
+<div style="display:flex; align-items:center;">
+<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="120" style="padding-right: 10px">
 <span>040301025629504 A/N Diki Siswanto</span>
 </div>	
 
