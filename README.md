@@ -30,7 +30,8 @@ Jika menemukan masalah atau bug pada tema `cosmos` silakan buat *issue* melalui 
 
 Suka dengan tampilan tema `cosmos`? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
 
-![Bank BRI](https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png?w=200) 040301025629504 A/N Diki Siswanto
+<img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="20">	
+040301025629504 A/N Diki Siswanto
 
 ## Bantuan
 
