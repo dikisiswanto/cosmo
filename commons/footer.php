@@ -22,7 +22,7 @@
 				</div>
 				<div class="copyright">
 					<span>&copy; <?= date('Y') ?> - Hak Cipta dilindungi Undang-Undang.</span>
-					<span>Tema Cosmos oleh <a href="https://dikisiswanto.github.io">Diki Siswanto</a></span>
+					<span>Tema <a href="https://github.com/dikisiswanto/OpenSID-Cosmos/">Cosmos</a> oleh <a href="https://dikisiswanto.github.io">Diki Siswanto</a></span>
 					<span>Ditenagai oleh <a href="https://github.com/OpenSID/OpenSID">OpenSID</a> <?= AmbilVersi(); ?> yang dikembangkan oleh <a href="https://www.facebook.com/groups/OpenSID/">Komunitas OpenSID</a></span>
 				</div>
 			</div>
