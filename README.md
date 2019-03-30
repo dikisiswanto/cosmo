@@ -1,6 +1,6 @@
 # OpenSID-Cosmos
 
-**Cosmos** adalah tema atau tampilan modul web dari aplikasi OpenSID yang responsif, modern, dan terintegrasi. Dibangun dengan basis *framework* Bootstrap 4 yang lebih fleksibel dan mudah dikostumisasi. Tema ini juga memakai beberapa *plugin* pendukung yang membuat penampilan dari web desa yang menggunakan tema ini makin ciamik.
+**Cosmos** ([https://github.com/dikisiswanto/OpenSID-Cosmos/](https://github.com/dikisiswanto/OpenSID-Cosmos/)) adalah tema atau tampilan modul web dari aplikasi OpenSID yang responsif, modern, dan terintegrasi. Dibangun dengan basis *framework* [Bootstrap](https://getbootstrap.com) 4 yang lebih fleksibel dan mudah dikostumisasi. Tema ini juga memakai beberapa *plugin* pendukung yang membuat penampilan dari web desa yang menggunakan tema ini makin ciamik.
 
 ## Tampilan Tema Cosmos
 
@@ -35,7 +35,6 @@ Suka dengan tampilan tema `cosmos`? Anda bisa ikut mendukung pengembangan tema i
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png" width="120px" style="padding-right: 10px">
 <div><b>0403-01-025629-50-4 a/n Diki Siswanto</b></div>
 </div>	
-
 
 ## Bantuan
 
