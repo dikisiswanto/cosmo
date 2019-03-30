@@ -34,7 +34,7 @@ Suka dengan tampilan tema **cosmos**? Anda bisa ikut mendukung pengembangan tema
 
 <div style="display:flex; align-items:center !important; justify-content: flex-start">
 <img src="https://i1.wp.com/indonesiacoffeeevents.com/wp-content/uploads/2018/12/Logo-Bank-BRI.png" width="120" hight="40px" style="padding-right: 10px">
-<div>040301025629504 a/n Diki Siswanto</div>
+<b>040301025629504 a/n Diki Siswanto</b>
 </div>	
 
 
