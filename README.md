@@ -33,7 +33,7 @@ Suka dengan tampilan tema `cosmos`? Anda bisa ikut mendukung pengembangan tema i
 
 <div style="display:flex; align-items:center !important; justify-content: flex-start">
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png" width="120px" style="padding-right: 10px">
-<div><b>040301025629504 a/n Diki Siswanto</b></div>
+<div><b>0403-01-025629-50-4 a/n Diki Siswanto</b></div>
 </div>	
 
 
