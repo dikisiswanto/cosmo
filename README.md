@@ -6,7 +6,6 @@
 
 Berikut tangkapan layar dari tampilan halaman depan tema `cosmos`
 
-![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/DwsgwfSz/laman-beranda.png)
 ![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/zXHwxDSk/laman-beranda2.png)
 
 Tampilan laman artikel tema `cosmos`
