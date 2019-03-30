@@ -33,7 +33,7 @@ Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalu
 Suka dengan tampilan tema **cosmos**? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
 
 <div style="display:flex; align-items:center !important; justify-content: flex-start">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png" width="70px" style="padding-right: 10px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png" width="120px" style="padding-right: 10px">
 <div><b>040301025629504 a/n Diki Siswanto</b></div>
 </div>	
 
