@@ -1,4 +1,5 @@
 # OpenSID-Cosmos
+![GitHub Releases](https://img.shields.io/github/downloads/dikisiswanto/OpenSID-Cosmos/latest/total.svg)
 
 **Cosmos** ([https://github.com/dikisiswanto/OpenSID-Cosmos/](https://github.com/dikisiswanto/OpenSID-Cosmos/)) adalah tema atau tampilan modul web dari aplikasi OpenSID yang responsif, modern, dan terintegrasi. Dibangun dengan basis *framework* [Bootstrap](https://getbootstrap.com) 4 yang lebih fleksibel dan mudah dikostumisasi. Tema ini juga memakai beberapa *plugin* pendukung yang membuat penampilan dari web desa yang menggunakan tema ini makin ciamik.
 
