@@ -820,6 +820,32 @@ aside .info-desa table tr td {
 	padding: 5px 10px;
 	font-size: 85%;
 }
+aside ul#li-komentar a img {
+	width: 48%;
+	height: 130px;
+	object-fit: cover;
+	margin-bottom: 5px;
+}
+aside ul#li-komentar li {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+aside ul#li-komentar li i {
+	padding-right: 10px;
+}
+aside ul#li-komentar li a {
+	padding: 5px;
+	color: skyblue;
+	display: block
+}
+aside ul#li-komentar li br {
+	display: none;
+}
+aside ul#ul-menu {
+	list-style: square;
+	margin-left: 18px
+}
+
 
 /* Halaman statistik */
 .box-stats .btn-group {
