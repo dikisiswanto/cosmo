@@ -22,7 +22,7 @@ Untuk melihat langsung penampilan tema `cosmos`, silakan menuju [Link Demo](http
 
 1. Rilis terbaru dapat diunduh dari laman **releases** di [https://github.com/dikisiswanto/OpenSID-Cosmos/releases](https://github.com/dikisiswanto/OpenSID-Cosmos/releases). Pilih rilis yang dibutuhkan dan unduh *source* dengan tipe berkas yang diinginkan.
 2. Selanjutnya *extract* berkas yang telah diunduh dan salin semua isi dari folder hasil *extract* ke dalam folder `desa/themes/` di aplikasi OpenSID. Pastikan membuat dan memberi nama folder `cosmos` sebagai penampung isi berkas tema.
-3. [Setting aplikasi OpenSID](https://github.com/OpenSID/OpenSID/wiki/Panduan-Konfigurasi-Aplikasi#setting-aplikasi) dan pilih tema **cosmos** untuk [web_theme](https://github.com/OpenSID/OpenSID/wiki/Panduan-Konfigurasi-Aplikasi#setting-web_theme).
+3. [Setting aplikasi OpenSID](https://github.com/OpenSID/OpenSID/wiki/Panduan-Konfigurasi-Aplikasi#setting-aplikasi) dan pilih tema `desa/cosmos` untuk [web_theme](https://github.com/OpenSID/OpenSID/wiki/Panduan-Konfigurasi-Aplikasi#setting-web_theme).
 4. Muat ulang laman web dari aplikasi OpenSID untuk melihat perubahannya.
 
 ## Kontribusi
