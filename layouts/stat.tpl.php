@@ -37,7 +37,7 @@
 						</div>
 						<aside class="col-lg-4 justify-content-end">
 							<div class="widget">
-								<?= $this->load->view($folder_themes .'/partials/widget') ?>
+								<?php $this->load->view($folder_themes .'/partials/widget') ?>
 							</div>	
 						</aside>
 					</div>

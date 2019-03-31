@@ -86,7 +86,7 @@
 					</div>
 					<aside class="col-lg-4 justify-content-end">
 						<div class="widget">
-							<?= $this->load->view($folder_themes .'/partials/widget') ?>
+							<?php $this->load->view($folder_themes .'/partials/widget') ?>
 						</div>	
 					</aside>
 				</div>
@@ -94,7 +94,7 @@
 		</div>
 	</main>
 </section>
-<?= $this->load->view($folder_themes .'/commons/footer') ?>
+<?php $this->load->view($folder_themes .'/commons/footer') ?>
 <script>
 		$("#share").jsSocials({
 				shares: ["email", "twitter", "facebook", "googleplus", "line", "whatsapp"]
