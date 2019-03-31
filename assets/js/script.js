@@ -54,10 +54,14 @@ $(window).ready(function(){
 		}
 	});
 	let elem = '<div class="table-responsive"></div>';
+	let fotoArtikel = '<figure class="foto-artikel"></div>';
 	$('article').find('table').each(function() {
 		$(elem).insertAfter($(this)).html($(this));
 	});
 	$('article').find('iframe').each(function() {
 		$(elem).insertAfter($(this)).html($(this));
 	});
+	$('article').find('img').each(function(){
+		$(fotoArtikel).insertAfter($(this)).html($(this).addClass('img-fluid'));
+	})
 })
