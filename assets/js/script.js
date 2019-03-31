@@ -53,4 +53,11 @@ $(window).ready(function(){
 			}
 		}
 	});
+	let elem = '<div class="table-responsive"></div>';
+	$('article').find('table').each(function() {
+		$(elem).insertAfter($(this)).html($(this));
+	});
+	$('article').find('iframe').each(function() {
+		$(elem).insertAfter($(this)).html($(this));
+	});
 })
