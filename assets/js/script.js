@@ -54,7 +54,7 @@ $(window).ready(function(){
 		}
 	});
 	let elem = '<div class="table-responsive"></div>';
-	let fotoArtikel = '<figure class="foto-artikel"></div>';
+	let fotoArtikel = '<figure class="foto-artikel"></figure>';
 	$('article').find('table').each(function() {
 		$(elem).insertAfter($(this)).html($(this));
 	});
