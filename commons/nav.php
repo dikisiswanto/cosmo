@@ -39,13 +39,11 @@
 					<?php endforeach ?>
 				<?php endif ?>
 			</ul>
-			<?php if($this->uri->segment(2) == 'first') : ?>
-				<div class="search-button d-none d-lg-inline-block">
-					<button type="button" class="bg-transparent btn pr-0">
-						<span><i class="fa fa-search"></i></span>
-					</button>
-				</div>
-			<?php endif ?>
+			<div class="search-button d-none d-lg-inline-block">
+				<button type="button" class="bg-transparent btn pr-0">
+					<span><i class="fa fa-search"></i></span>
+				</button>
+			</div>
 		</div>
 	</nav>
 </section>
