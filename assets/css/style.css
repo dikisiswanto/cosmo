@@ -173,7 +173,10 @@ nav #navMenu li.menu-active > a, nav #navMenu li.active a {
 }
 nav #navMenu li ul.sub-menu {
 	background: #22264b !important;
-	z-index: 11;
+	z-index: 999;
+}
+nav #navMenu li ul.sub-menu li a {
+	padding: 10px 12px;
 }
 nav .menu-toggle {
 	background: #22264b !important;
