@@ -89,8 +89,7 @@
 								</div>
 							<?php endforeach ?>
 							<?php else : ?>
-								<div class="col-12 text-center pt-3 pb-5">
-									<p>
+								<div class="col-12 text-center pt-3 pb-5 d-flex flex-column">
 									<p>Belum ada artikel yang dituliskan dalam <strong><?= $title ?></strong>.</p>
 									<p>Silakan kunjungi situs web kami dalam waktu dekat.</p>
 									</p>
