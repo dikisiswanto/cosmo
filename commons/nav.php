@@ -20,6 +20,9 @@
 			</div>
 			<ul id="navMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 				<?php if($menu_atas) : ?>
+					<li class="d-none d-lg-inline-block">
+						<a href="<?= site_url('first') ?>" style="padding-right:10px"><i class="fa fa-home" style="line-height: 1.5rem"></i></a>
+					</li>
 					<?php foreach($menu_atas as $data) : ?>
 						<?php if(count($data['submenu']) > 0) : ?>
 							<li class="<?php nested_array_search(current_url(), $data['submenu']) and print('active') ?>"><a href="#!"><?= strtoupper($data['nama']) ?></a>
@@ -50,7 +53,7 @@
 <section class="modal-search-form d-none" id="modal-search-form" role="dialog">
 	<form action="<?= site_url('first');?>" method="get">
 		<div class="input-group">
-			<input type="search" class="form-control bg-transparent" placeholder="Cari sesuatu..." name="cari" autocomplete="off">
+			<input type="search" class="form-control bg-transparent" placeholder="Cari sesuatu..." name="cari" autocomplete="off" autofocus>
 			<span class="input-group-append">
 				<button class="btn" type="submit">
 					<i class="fa fa-search"></i>
