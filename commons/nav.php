@@ -50,7 +50,7 @@
 <section class="modal-search-form d-none" id="modal-search-form" role="dialog">
 	<form action="<?= site_url('first');?>" method="get">
 		<div class="input-group">
-			<input type="search" class="form-control bg-transparent" placeholder="Cari Sesuatu..." name="cari">
+			<input type="search" class="form-control bg-transparent" placeholder="Cari Sesuatu..." name="cari" autocomplete="off">
 			<span class="input-group-append">
 				<button class="btn" type="submit">
 					<i class="fa fa-search"></i>
