@@ -97,6 +97,7 @@
 <?php $this->load->view($folder_themes .'/commons/footer') ?>
 <script>
 		$("#share").jsSocials({
-				shares: ["email", "twitter", "facebook", "googleplus", "line", "whatsapp"]
+				shares: ["email", "twitter", "facebook", "googleplus", "line", "whatsapp"],
+				shareIn: 'blank'
 		});
 </script>

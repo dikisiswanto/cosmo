@@ -63,5 +63,13 @@ $(window).ready(function(){
 	});
 	$('article').find('img').each(function(){
 		$(fotoArtikel).insertAfter($(this)).html($(this).addClass('img-fluid'));
+	});
+	$('.search-button').on('click', function(){
+		$('body').addClass('search-form-open');
+		$('#modal-search-form').removeClass('d-none');
+	});
+	$('.close-search-form').on('click', function(){
+		$('body').removeClass('search-form-open');
+		$('#modal-search-form').addClass('d-none');
 	})
 })

@@ -1,6 +1,5 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-
 <div class="box">
 	<form action="<?= site_url('first');?>" method="get" id="search">
 		<div class="input-group">
@@ -22,7 +21,7 @@
 				<?php else : ?>
 					<div class="box box-primary box-solid">
 						<div class="box-header">
-							<h3 class="box-title"><?= $data['judul'] ?></h3>
+							<h3 class="box-title"><?= strip_tags($data['judul']) ?></h3>
 						</div>
 						<div class="box-body">
 							<?= html_entity_decode($data['isi'])  ?>

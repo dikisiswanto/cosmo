@@ -440,14 +440,14 @@
 
         twitter: {
             label: "Tweet",
-            logo: "fa fa-twitter",
+            logo: "fab fa-twitter",
             shareUrl: "https://twitter.com/share?url={url}&text={text}&via={via}&hashtags={hashtags}",
             countUrl: ""
         },
 
         facebook: {
             label: "Like",
-            logo: "fa fa-facebook",
+            logo: "fab fa-facebook",
             shareUrl: "https://facebook.com/sharer/sharer.php?u={url}",
             countUrl: "https://graph.facebook.com/?id={url}",
             getCount: function(data) {
@@ -457,7 +457,7 @@
 
         vkontakte: {
             label: "Like",
-            logo: "fa fa-vk",
+            logo: "fab fa-vk",
             shareUrl: "https://vk.com/share.php?url={url}&title={title}&description={text}",
             countUrl: "https://vk.com/share.php?act=count&index=1&url={url}",
             getCount: function(data) {
@@ -467,14 +467,14 @@
 
         googleplus: {
             label: "+1",
-            logo: "fa fa-google",
+            logo: "fab fa-google",
             shareUrl: "https://plus.google.com/share?url={url}",
             countUrl: ""
         },
 
         linkedin: {
             label: "Share",
-            logo: "fa fa-linkedin",
+            logo: "fab fa-linkedin",
             shareUrl: "https://www.linkedin.com/shareArticle?mini=true&url={url}",
             countUrl: "https://www.linkedin.com/countserv/count/share?format=jsonp&url={url}&callback=?",
             getCount: function(data) {
@@ -484,7 +484,7 @@
 
         pinterest: {
             label: "Pin it",
-            logo: "fa fa-pinterest",
+            logo: "fab fa-pinterest",
             shareUrl: "https://pinterest.com/pin/create/bookmarklet/?media={media}&url={url}&description={text}",
             countUrl: "https://api.pinterest.com/v1/urls/count.json?&url={url}&callback=?",
             getCount: function(data) {
@@ -494,7 +494,7 @@
 
         stumbleupon: {
             label: "Share",
-            logo: "fa fa-stumbleupon",
+            logo: "fab fa-stumbleupon",
             shareUrl: "http://www.stumbleupon.com/submit?url={url}&title={title}",
             countUrl:  "https://cors-anywhere.herokuapp.com/https://www.stumbleupon.com/services/1.01/badge.getinfo?url={url}",
             getCount: function(data) {
@@ -512,8 +512,8 @@
 
         whatsapp: {
             label: "WhatsApp",
-            logo: "fa fa-whatsapp",
-            shareUrl: "whatsapp://send?text={url} {text}",
+            logo: "fab fa-whatsapp",
+            shareUrl: "https://api.whatsapp.com/send?text={url} {text}",
             countUrl: "",
             shareIn: "self"
         },
