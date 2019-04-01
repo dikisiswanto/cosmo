@@ -278,6 +278,7 @@ nav .menu-toggle #menu-btn {
 }
 #article-content-wrapper .card .card-body {
 	flex-grow: 1;
+	padding-bottom: 8px;
 }
 #article-content-wrapper .card .card-body a {
 	text-decoration: none !important;
