@@ -21,7 +21,7 @@
 			<ul id="navMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 				<?php if($menu_atas) : ?>
 					<li class="d-none d-lg-inline-block">
-						<a href="<?= site_url('first') ?>" style="padding-right:10px"><i class="fa fa-home" style="line-height: 1.5rem"></i></a>
+						<a href="<?= site_url('first') ?>" style="padding-right:10px" title="Ke halaman utama"><i class="fa fa-home" style="line-height: 1.5rem"></i></a>
 					</li>
 					<?php foreach($menu_atas as $data) : ?>
 						<?php if(count($data['submenu']) > 0) : ?>

@@ -1,3 +1,14 @@
+<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<?php $paging_page ? $paging_page : $paging_page = 'arsip' ?>
+<?php 
+	if ($paging_page == 'arsip') {
+		$pages = [];
+		for($i=$paging->start_link; $i<=$paging->end_link; $i++) {
+			array_push($pages, $i);
+		}
+	}
+?>
 <?php if((int) $paging->end_link > 1) : ?>
 	<div class="paging mt-4 mb-5 mx-auto">
 		<div class="col-12 col-sm-12">

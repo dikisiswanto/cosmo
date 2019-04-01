@@ -166,6 +166,13 @@ nav #navMenu li a {
 	padding: 15px 18px 15px 12px;
 	margin-bottom: 0;
 	line-height: 1.5rem;
+	transition: all .3s;
+}
+nav #navMenu li:first-child a i {
+	color: #ccc;
+}
+nav #navMenu li:first-child a:hover i {
+	color: #FF5737;
 }
 nav #navMenu li.menu-active > a, nav #navMenu li.active a {
 	background: #181b35 !important;
@@ -173,7 +180,7 @@ nav #navMenu li.menu-active > a, nav #navMenu li.active a {
 }
 nav #navMenu li ul.sub-menu {
 	background: #22264b !important;
-	z-index: 999;
+	z-index: 9999;
 }
 nav #navMenu li ul.sub-menu li a {
 	padding: 10px 12px;

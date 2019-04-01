@@ -20,7 +20,10 @@
 						Indonesia
 					</span>
 				</div>
-				<div class="copyright">
+				<div class="col-12 mt-3 mb-0">
+					<a href="<?= site_url('siteman') ?>" class="font-weight-bold" style="letter-spacing: 1px">LOGIN ADMIN</a>
+				</div>
+				<div class="copyright mt-3">
 					<span>&copy; <?= date('Y') ?> - Hak Cipta dilindungi Undang-Undang.</span>
 					<span>Tema <a href="https://github.com/dikisiswanto/OpenSID-Cosmos/">Cosmos</a> oleh <a href="https://dikisiswanto.github.io">Diki Siswanto</a></span>
 					<span>Ditenagai oleh <a href="https://github.com/OpenSID/OpenSID">OpenSID</a> <?= AmbilVersi(); ?> yang dikembangkan oleh <a href="https://www.facebook.com/groups/OpenSID/">Komunitas OpenSID</a></span>
