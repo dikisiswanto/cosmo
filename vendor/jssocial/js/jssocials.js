@@ -513,7 +513,7 @@
         whatsapp: {
             label: "WhatsApp",
             logo: "fab fa-whatsapp",
-            shareUrl: "https://web.whatsapp.com/send?text={url} {text}",
+            shareUrl: "https://api.whatsapp.com/send?text={url} {text}",
             countUrl: "",
             shareIn: "self"
         },
