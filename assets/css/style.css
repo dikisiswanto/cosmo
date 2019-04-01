@@ -229,23 +229,36 @@ nav .menu-toggle #menu-btn {
 	font-weight: 700;
 	font-size: calc(18px + 6 * ((100vw - 320px) / 680));
 }
-.article-content-wrapper {
-	margin: auto !important;
-	height: min-content;
+#article-content-wrapper [class*=col-]{
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row wrap;
+	overflow: hidden;
 	object-fit: fill;
 }
-.article-content-wrapper .card {
-	
+#article-content-wrapper .card {
+	-ms-flex-flow: column;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	position: relative;
 	background: #fff;
 	color: #555;
 	box-shadow: 0px 0px 8px rgba(9,9,9,.15);
 }
-.article-content-wrapper .card .card-image a {
+#article-content-wrapper .card .card-image a {
 	display: block;
 	position: relative;
 	overflow: hidden;
 }
-.article-content-wrapper .card .card-image a .flash {
+#article-content-wrapper .card .card-image a .flash {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -253,27 +266,30 @@ nav .menu-toggle #menu-btn {
 	bottom: 0;
   transition: all 0.3s .09s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-.article-content-wrapper .card .card-image img {
+#article-content-wrapper .card .card-image img {
 	width: 100%;
 	height: 180px;
 	object-fit: cover;
 }
-.article-content-wrapper .card .card-image a:hover .flash {
+#article-content-wrapper .card .card-image a:hover .flash {
 	-webkit-transform: translate(100%);
 	transform: translate(100%);
 	background: linear-gradient(to right,rgba(255,255,255,.1), rgba(255,255,255,.3), transparent, transparent, transparent, transparent, transparent);
 }
-.article-content-wrapper .card .card-body a {
+#article-content-wrapper .card .card-body {
+	flex-grow: 1;
+}
+#article-content-wrapper .card .card-body a {
 	text-decoration: none !important;
 }
-.article-content-wrapper .card .card-body .kategori-berita {
+#article-content-wrapper .card .card-body .kategori-berita {
 	width: auto;
 	background: teal;
 	color: #fff;
 	padding: 3px 5px;
 	font-size: 80%;
 }
-.article-content-wrapper .card .card-body .judul-berita {
+#article-content-wrapper .card .card-body .judul-berita {
 	width: auto;
 	color: #22264b;
 	margin-top: 10px;
@@ -282,11 +298,17 @@ nav .menu-toggle #menu-btn {
 	font-weight: 700;
 	border-bottom: 1px solid #f5f5f5;
 }
-.article-content-wrapper .card .card-body a:hover .judul-berita {
+#article-content-wrapper .card .card-body a:hover .judul-berita {
 	color: #60299e;
 }
 .meta-berita {
+	-webkit-box-align: center;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	align-items: center;
+	display: -webkit-box;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	font-size: 75%;
 	color: #909090;

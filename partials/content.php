@@ -41,11 +41,11 @@
 			<h3 class="h3 py-5 mt-2 text-center"><?= $title ?></h3>
 			<div class="article-content-wrapper">
 				<div class="col-12 px-0">
-					<div class="row mb-5 mx-auto justify-content-center" class="article-content-wrapper">
+					<div class="row mb-5 mx-auto justify-content-center" id="article-content-wrapper">
 						<?php if($artikel) : ?>
 							<?php foreach($artikel as $data) : ?>
 								<?php $url = site_url('first/artikel/'.$data['id']) ?>
-								<?php $abstrak = potong_teks($data['isi'], 210) ?>
+								<?php $abstrak = potong_teks($data['isi'], 180) ?>
 								<div class="col-lg-4 col-md-6 col-sm-12 mb-4">
 									<div class="card">
 											<div class="card-image">
@@ -72,6 +72,8 @@
 											<p>
 												<?= $abstrak ?>...
 											</p>
+										</div>
+										<div class="card-footer">
 											<div class="meta-berita">
 												<span>
 													<i class="fa fa-calendar-alt"></i>
