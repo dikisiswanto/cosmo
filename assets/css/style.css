@@ -35,7 +35,7 @@ body {
 	color: whitesmoke;
 }
 .top-header ul > li > a {
-	padding: 8px 10px;
+	padding: 6px 10px;
 	color: whitesmoke;
 }
 .top-header ul > li:first-child > a {
@@ -50,7 +50,7 @@ body {
 	justify-content: flex-end;
 }
 .top-header .meta-desa ul li {
-	padding: 8px 10px;
+	padding: 6px 10px;
 }
 .top-header .meta-desa ul li:last-child {
 	padding-right: 0;
@@ -76,7 +76,7 @@ body {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	padding: 0px 10px;
+	padding: 0px 7px;
 	font-weight: bold;
 	color: aliceblue;
 	background: #a52a2a;
@@ -93,7 +93,7 @@ body {
 }
 .teks-berjalan ul.marquee {
 	margin: 0;
-	padding: 5px 0;
+	padding: 3px 0;
 	overflow: hidden;
 	list-style-type: disc;
 }
@@ -163,6 +163,9 @@ nav #navMenu li a {
 	font-size: 12px;
 	background: #22264b !important;
 	color: #ccc !important;
+	padding: 15px 18px 15px 12px;
+	margin-bottom: 0;
+	line-height: 1.5rem;
 }
 nav #navMenu li.menu-active > a, nav #navMenu li.active a {
 	background: #181b35 !important;
@@ -739,8 +742,8 @@ body.search-form-open {
 	background: rgba(9,9,9,.7);
 	z-index: 99999;
 	visibility: visible;
-	animation-duration: .3s;
-	animation-name: fadeInOut;
+	animation-duration: .2s;
+	animation-name: slideInDown;
 }
 #modal-search-form form {
 	width: calc(90vw - 10px);
