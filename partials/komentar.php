@@ -2,7 +2,7 @@
 
 <?php if(is_array($komentar)) : ?>
 	<?php 
-	$k = [];
+	$k = array();
 	foreach ($komentar as $data) {
 		if ($data['enabled'] == 1) {
 			array_push($k, $data);

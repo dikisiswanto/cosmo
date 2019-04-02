@@ -3,7 +3,7 @@
 <?php $paging_page ? $paging_page : $paging_page = 'arsip' ?>
 <?php 
 	if ($paging_page == 'arsip') {
-		$pages = [];
+		$pages = array();
 		for($i=$paging->start_link; $i<=$paging->end_link; $i++) {
 			array_push($pages, $i);
 		}
