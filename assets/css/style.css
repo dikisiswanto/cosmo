@@ -1,7 +1,7 @@
 /**
 
   Style   : Frontend web theme OpenSID
-  Version : 1.2
+  Version : 1.2.3
   Author  : Diki Siswanto
 
  **/
@@ -804,8 +804,8 @@ aside {
 	padding-left: 0 !important;
 }
 aside .widget {
-	display: grid;
-	grid-auto-columns: 1;
+	max-width: 100%;
+	overflow: hidden;
   width: 100%;
 }
 aside .widget .box {
@@ -837,6 +837,9 @@ aside .widget .box h3.box-title:before {
 	border: 6px solid transparent;
 	border-right: 6px solid #023535;
 	border-top: 6px solid #023535;
+}
+aside .widget .box iframe {
+	width: 100% !important;
 }
 form#search {
 	margin: -12px -15px;
