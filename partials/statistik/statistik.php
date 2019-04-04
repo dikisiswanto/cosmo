@@ -161,7 +161,7 @@ $(function(){
 					<?php endif ?>
 				</tr>
 				<?php 
-					$i = $i+data['jumlah'];
+					$i = $i+$data['jumlah'];
 					$l = $l+$data['laki'];
 					$p = $p+$data['perempuan'];
 				?>
