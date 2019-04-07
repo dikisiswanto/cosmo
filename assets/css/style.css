@@ -1,7 +1,7 @@
 /**
 
   Style   : Frontend web theme OpenSID
-  Version : 1.2.3
+  Version : 1.3
   Author  : Diki Siswanto
 
  **/
@@ -560,7 +560,7 @@ nav .menu-toggle #menu-btn {
 /* Akses Data */
 #akses-data {
 	background: #fff;
-	padding: 60px 60px 120px;
+	padding: 60px 0px 100px;
 }
 #akses-data .h3 {
 	color: #008080;
@@ -611,6 +611,12 @@ nav .menu-toggle #menu-btn {
 	color: #22264b;
 	z-index: 3;
 	font-family: 'Montserrat', sans-serif;
+}
+
+/* APDES Progressbar  */
+#apdes {
+	padding-top: 60px;
+	padding-bottom: 100px; 
 }
 
 /* Footer */
