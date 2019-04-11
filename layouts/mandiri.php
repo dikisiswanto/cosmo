@@ -13,7 +13,7 @@
 		<div class="loader-section section-left"></div>
 		<div class="loader-section section-right"></div>
 	</div>
-	<?php $modul = [1,2,3,4] ?>
+	<?php $modul = array(1,2,3,4) ?>
 	<?php if(in_array($m, $modul)) : ?>
 		<?php $this->load->view($folder_themes . '/partials/mandiri/mandiri_layout') ?>
 		<?php else : ?>

@@ -1,7 +1,7 @@
 /**
 
   Style   : Frontend web theme OpenSID
-  Version : 1.3
+  Version : 1.3.1
   Author  : Diki Siswanto
 
  **/
@@ -962,7 +962,18 @@ aside ul#ul-menu {
 	list-style: square;
 	margin-left: 18px
 }
-
+aside #container table {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+aside #container table tbody tr {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+aside #container table tbody tr td:last-child {
+	text-align: right;
+}
 
 /* Halaman statistik */
 .box-stats .btn-group {

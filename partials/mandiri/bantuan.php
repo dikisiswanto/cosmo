@@ -58,9 +58,9 @@ function show_kartu_peserta(elem){
 		<?php endforeach; ?>
 		</tbody>
 		</table>
-	</div>
-	<?php else: ?>
+		<?php else: ?>
 		<p class='text-danger'>Daftar kosong sebab Anda tidak terdaftar dalam program bantuan apapun.</p>
-	<?php endif; ?>
+		<?php endif; ?>
+	</div>
 </div>
 
