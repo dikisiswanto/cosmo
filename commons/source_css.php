@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/owl-carousel/css/owl.carousel.min.css") ?>">
 <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/owl-carousel/css/owl.theme.default.min.css") ?>">
 <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/fancybox/css/jquery.fancybox.min.css") ?>">
-<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/jssocial/css/jssocials.css") ?>">
+<link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/jssocial/css/jssocials.min.css") ?>">
 <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/vendor/jssocial/css/jssocials-theme-flat.css") ?>">
 <link rel="stylesheet" href="<?= base_url("assets/css/leaflet.css")?>">
 <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/animate.min.css") ?>">
