@@ -32,7 +32,7 @@
 							<?php if($single_artikel['gambar'] != '' && is_file(LOKASI_FOTO_ARTIKEL.'sedang_'.$single_artikel['gambar'])) : ?>
 							<figure class="foto-artikel">
 								<a href="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" data-fancybox="images">
-								<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" alt="<?= $single_artikel['judul'] ?>" class="img-fluid lazy">
+								<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" class="img-fluid lazy">
 								</a>
 							</figure>
 							<?php endif ?>

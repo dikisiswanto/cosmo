@@ -51,7 +51,7 @@
 											<div class="card-image">
 												<a href="<?= $url ?>">
 													<?php if($data['gambar'] && is_file(LOKASI_FOTO_ARTIKEL.'kecil_'.$data['gambar'])) : ?>
-													<img data-src="<?= AmbilFotoArtikel($data['gambar'],'kecil') ?>" alt="<?= $data['judul'] ?>" class="img-fluid lazy">
+													<img data-src="<?= AmbilFotoArtikel($data['gambar'],'kecil') ?>"  class="img-fluid lazy">
 														<?php else : ?>
 														<img data-src="<?= base_url('assets/images/404-image-not-found.jpg') ?>" alt="" class="img-fluid lazy">
 													<?php endif ?>
