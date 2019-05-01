@@ -71,5 +71,12 @@ $(window).ready(function(){
 	$('.close-search-form').on('click', function(){
 		$('body').removeClass('search-form-open');
 		$('#modal-search-form').addClass('d-none');
-	})
+	});
+	$('img.lazy').lazy({
+		effect: "fadeIn",
+		combined: true,
+		effectTime: 500,
+		threshold: 0,
+		delay: 3500,
+	});
 })

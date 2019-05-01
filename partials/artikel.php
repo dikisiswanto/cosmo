@@ -32,7 +32,7 @@
 							<?php if($single_artikel['gambar'] != '' && is_file(LOKASI_FOTO_ARTIKEL.'sedang_'.$single_artikel['gambar'])) : ?>
 							<figure class="foto-artikel">
 								<a href="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" data-fancybox="images">
-								<img src="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" alt="<?= $single_artikel['judul'] ?>" class="img-fluid">
+								<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar'], 'sedang') ?>" alt="<?= $single_artikel['judul'] ?>" class="img-fluid lazy">
 								</a>
 							</figure>
 							<?php endif ?>
@@ -52,7 +52,7 @@
 								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar1'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
-											<img src="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-3" title="<?= $single_artikel['nama'] ?>">
+											<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar1'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-3 lazy" title="<?= $single_artikel['nama'] ?>">
 										</a>
 									</figure>
 								<?php endif ?>
@@ -62,7 +62,7 @@
 								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar2'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
-											<img src="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">
+											<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar2'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1 lazy" title="<?= $single_artikel['nama'] ?>">
 										</a>
 									</figure>
 								<?php endif ?>
