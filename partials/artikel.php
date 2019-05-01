@@ -72,7 +72,7 @@
 								<?php if(is_file(LOKASI_FOTO_ARTIKEL . "sedang_" . $single_artikel['gambar3'])) : ?>
 									<figure class="foto-artikel">
 										<a href="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" class="item-foto" class="item-foto" data-fancybox="images">
-											<img src="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1" title="<?= $single_artikel['nama'] ?>">
+											<img data-src="<?= AmbilFotoArtikel($single_artikel['gambar3'],'sedang') ?>" alt="<?= $single_artikel['nama'] ?>" class="img-fluid mt-1 lazy" title="<?= $single_artikel['nama'] ?>">
 										</a>
 									</figure>
 								<?php endif ?>
