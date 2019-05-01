@@ -7,7 +7,7 @@
 				<?php $img = $slider_gambar['lokasi'] . 'sedang_' . $data['gambar']; ?>
 				<?php if(is_file($img)) : ?>
 					<div class="item">
-						<img data-src="<?= base_url($img) ?>" alt="<?= $data['judul'] ?>" class="img-fluid owl-lazy">
+						<img data-src="<?= base_url($img) ?>" alt="<?= $data['judul'] ?>" class="img-fluid lazy">
 					</div>
 				<?php endif ?>
 			<?php endforeach ?>
