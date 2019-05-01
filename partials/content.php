@@ -21,7 +21,7 @@
 								</div>
 								<?php if(is_file(LOKASI_FOTO_ARTIKEL .'kecil_'.$headline['gambar'])) : ?>
 									<div class="headline-gambar d-none d-lg-block">
-										<img src="<?= AmbilFotoArtikel($headline['gambar'], 'kecil') ?>" alt="<?= $headline['judul'] ?>" title="<?= $headline['judul'] ?>" class="img-fluid">
+										<img data-src="<?= AmbilFotoArtikel($headline['gambar'], 'kecil') ?>" class="img-fluid lazy">
 									</div>
 								<?php endif ?>
 							</div>
@@ -51,9 +51,9 @@
 											<div class="card-image">
 												<a href="<?= $url ?>">
 													<?php if($data['gambar'] && is_file(LOKASI_FOTO_ARTIKEL.'kecil_'.$data['gambar'])) : ?>
-													<img src="<?= AmbilFotoArtikel($data['gambar'],'kecil') ?>" alt="<?= $data['judul'] ?>" class="img-fluid">
+													<img data-src="<?= AmbilFotoArtikel($data['gambar'],'kecil') ?>"  class="img-fluid lazy">
 														<?php else : ?>
-														<img src="<?= base_url('assets/images/404-image-not-found.jpg') ?>" alt="" class="img-fluid">
+														<img data-src="<?= base_url('assets/images/404-image-not-found.jpg') ?>" alt="" class="img-fluid lazy">
 													<?php endif ?>
 													<div class="flash"></div>
 												</a>

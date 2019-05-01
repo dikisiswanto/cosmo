@@ -1,7 +1,7 @@
 /**
 
   Style   : Frontend web theme OpenSID
-  Version : 1.3.1
+  Version : 1.3.2
   Author  : Diki Siswanto
 
  **/
@@ -339,6 +339,12 @@ nav .menu-toggle #menu-btn {
 }
 .meta-berita span i {
 	margin-right: 5px;
+}
+img.lazy, img.owl-lazy {
+	background-image: url('../image/dot-loading.gif');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* Pagination */
