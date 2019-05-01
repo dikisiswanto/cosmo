@@ -21,7 +21,7 @@
 								</div>
 								<?php if(is_file(LOKASI_FOTO_ARTIKEL .'kecil_'.$headline['gambar'])) : ?>
 									<div class="headline-gambar d-none d-lg-block">
-										<img data-src="<?= AmbilFotoArtikel($headline['gambar'], 'kecil') ?>" alt="<?= $headline['judul'] ?>" title="<?= $headline['judul'] ?>" class="img-fluid lazy">
+										<img data-src="<?= AmbilFotoArtikel($headline['gambar'], 'kecil') ?>" class="img-fluid lazy">
 									</div>
 								<?php endif ?>
 							</div>
