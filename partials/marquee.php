@@ -7,11 +7,9 @@
 				<span>INFO</span>
 			</div>
 			<ul class="marquee" id="marquee">
-			<?php foreach($teks_berjalan as $data) : ?>
 				<li>
-					<?= strip_tags($data['isi']) ?>
+					<?= $teks_berjalan ?>
 				</li>
-			<?php endforeach ?>
 			</ul>
 		<?php endif ?>
 	</div>
