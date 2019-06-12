@@ -3,14 +3,19 @@
 <div class="teks-berjalan marquee-container">
 	<div class="container">
 		<?php if($teks_berjalan) : ?>
-			<div class="teks-wrapper">
-				<span>INFO</span>
-			</div>
-			<ul class="marquee" id="marquee">
-				<li>
-					<?= $teks_berjalan ?>
-				</li>
-			</ul>
+		<div class="teks-wrapper">
+			<span>INFO</span>
+		</div>
+		<ul class="marquee" id="marquee">
+			<?php foreach($teks_berjalan as $teks) : ?>
+			<li>
+				<?= $teks['teks']?>
+				<?php if ($teks['tautan']): ?>
+					<a href="<?= site_url('first/artikel/'.$teks['tautan']) ?>"><?= $teks['judul_tautan']?></a>
+				<?php endif ?>
+			</li>
+			<?php endforeach ?>
+		</ul>
 		<?php endif ?>
 	</div>
 </div>

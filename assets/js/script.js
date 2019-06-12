@@ -79,4 +79,6 @@ $(window).ready(function(){
 		threshold: 0,
 		delay: 3500,
 	});
+	$('.nav-tabs>li:first-child').find('a').addClass('active show');
+	$('.tab-content div:first-child').addClass('active show');
 })

@@ -980,6 +980,17 @@ aside #container table tbody tr {
 aside #container table tbody tr td:last-child {
 	text-align: right;
 }
+aside .widget ul.nav.nav-tabs>li a {
+	display: inline-block;
+	padding: 8px 10px;
+}
+aside .widget ul.nav.nav-tabs>li a.active.show {
+	background: #fff;
+	color: #222;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
 
 /* Halaman statistik */
 .box-stats .btn-group {
