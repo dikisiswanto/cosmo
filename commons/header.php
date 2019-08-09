@@ -83,6 +83,9 @@
 						<?php  ?>
 					</div>
 				</div>
+				<div class="pl-lg-5 d-none d-lg-block">
+					<img src="https://thumbs.gfycat.com/UnselfishScornfulBufflehead-max-1mb.gif" alt="" height="80px" width="auto">
+				</div>
 			</a>
 		</div>
 	</div>

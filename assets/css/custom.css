@@ -1,0 +1,90 @@
+a {
+	color: #6c0014;
+}
+.top-header {
+	background-color: #c21807;
+}
+.teks-berjalan .teks-wrapper {
+	background-color: #bb141b;
+}
+.identitas-desa {
+	background: url('../image/flag.png');
+	background-color: #ececec;
+	background-position-y: -180px;
+	background-position-x: 62vw;
+	background-size: 400px auto;
+	background-repeat: no-repeat;
+}
+.identitas-desa .brand .detail .h1 {
+	color: #bb141b;
+}
+.identitas-desa .brand .detail .ket {
+	color: #6c0014;
+}
+.h3 {
+	color: #bb141b !important;
+}
+nav.nav {
+	background: #6c0014 !important;
+}
+nav #navMenu {
+	background: #6c0014 !important;
+}
+nav .menu-toggle {
+	background: #6c0014 !important;
+}
+nav #navMenu li a {
+	background: #6c0014 !important;
+}
+nav #navMenu li.menu-active > a, nav #navMenu li.active a {
+	background: #7d191b !important;
+}
+nav #navMenu li ul.sub-menu {
+	background: #7d191b !important;
+}
+#article-content-wrapper .card .card-body .judul-berita {
+	color: #6c0014;
+}
+#article-content-wrapper .card .card-body .kategori-berita {
+	background: #bb141b;
+}
+.mandiri-headline .h3 {
+	color: #fff !important;
+}
+aside .widget .box h3.box-title {
+	background: #bb141b;
+}
+aside .widget .box h3.box-title:before {
+	border-right: 6px solid #6c0014;
+	border-top: 6px solid #6c0014;
+}
+h2.judul-artikel {
+	color: #6c0014;
+}
+.btn-lihat-semua {
+	border-color: #6c0014;
+	color: #6c0014;
+}
+.btn-lihat-semua:hover {
+	background: #6c0014;
+	border-color: #6c0014;
+}
+#akses-data-wrapper .item {
+	border-color: #6c0014;
+}
+#akses-data-wrapper .item .jenis-akses-data {
+	color: #6c0014;
+}
+#layanan-mandiri {
+	background: url('../image/hut_ri.png') no-repeat center center fixed;
+	background-size: cover;
+}
+@media screen and (max-width: 767px) {
+	.identitas-desa {
+		background-color: #ececec;
+		background-position-y: -67px;
+		background-position-x: 67vw;
+		background-size: 150px auto;
+		background-repeat: space;
+	}
+}
