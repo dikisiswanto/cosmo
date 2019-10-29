@@ -14,10 +14,6 @@ Tampilan laman artikel tema `cosmos`
 
 ![Tema Cosmos, Tema Web OpenSID yang responsif dan ciamik](https://i.postimg.cc/nzTn6QB9/laman-artikel.png)
 
-## Demo
-
-Untuk melihat langsung penampilan tema `cosmos`, silakan menuju [Link Demo](https://cosmos.celebiz.net)
-
 ## Instalasi
 
 1. Rilis terbaru dapat diunduh dari laman **releases** di [https://github.com/dikisiswanto/OpenSID-Cosmos/releases](https://github.com/dikisiswanto/OpenSID-Cosmos/releases). Pilih rilis yang dibutuhkan dan unduh *source* dengan tipe berkas yang diinginkan.
@@ -27,17 +23,12 @@ Untuk melihat langsung penampilan tema `cosmos`, silakan menuju [Link Demo](http
 
 ## Kontribusi
 
-Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalui laman [Issues](https://github.com/dikisiswanto/OpenSID-Cosmos/issues) dan ceritakan masalah atau *bug* yang ditemukan.
-
-## Donasi
-
-Suka dengan tampilan tema `cosmos`? Anda bisa ikut mendukung pengembangan tema ini dengan cara berdonasi.
-
-<div style="display:flex; align-items:center !important; justify-content: flex-start">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png" width="120px" style="padding-right: 10px">
-<div><b>0403-01-025629-50-4 a/n Diki Siswanto</b></div>
-</div>	
+Jika menemukan masalah atau *bug* pada tema `cosmos` silakan buat *issue* melalui laman [Issues](https://github.com/dikisiswanto/OpenSID-Cosmos/issues) dan ceritakan masalah atau *bug* yang ditemukan. Jika Anda bersedia membantu memperbaiki issue yang ada silakan lakukan [Pull Request](https://github.com/dikisiswanto/OpenSID-Cosmos/pulls).
 
 ## Bantuan
 
 Silakan bergabung dengan [Forum Pengguna dan Pegiat OpenSID](https://www.facebook.com/groups/opensid) di Facebook. Grup ini merupakan tempat berbagi informasi dan saling membantu menggunakan dan mengembangkan aplikasi OpenSID. Silakan mempergunakan forum itu juga untuk bertanya mengenai tema `cosmos` dan untuk memberi usulan.
+
+## Epilog
+
+Jika repository ini dirasa bermanfaat, mohon kesediaannya memberi bintang ⭐
