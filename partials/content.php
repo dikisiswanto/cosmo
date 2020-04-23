@@ -102,30 +102,6 @@
 			<?php endif ?>
 		</div>
 	</section>
-	<section id="telusuri-by">
-		<div class="container">
-			<div class="kolom-telusuri">
-				<div class="item-telusuri berita">
-					<a href="<?= site_url('first/kategori/1') ?>" title="Berita Desa">
-						<i class="fa fa-newspaper"></i>
-						<span>Berita</span>
-					</a>
-				</div>
-				<div class="item-telusuri agenda">
-					<a href="<?= site_url('first/kategori/4') ?>" title="Agenda Desa">
-						<i class="fa fa-calendar-alt"></i>
-						<span>Agenda</span>
-					</a>
-				</div>
-				<div class="item-telusuri peraturan">
-					<a href="<?= site_url('first/kategori/5') ?>" title="Peraturan Desa">
-						<i class="fa fa-gavel"></i>
-						<span>Peraturan</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 	<?php $this->load->view($folder_themes .'/partials/mandiri/mandiri_login') ?>
 	<?php if($w_gal) : ?>
 		<section id="galeri-foto">
