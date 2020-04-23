@@ -55,6 +55,9 @@ nav #navMenu li ul.sub-menu {
 .headline {
 	border-left: 5px solid #D1AC4D;
 }
+main .box-header h3.box-title {
+	color: #519548;
+}
 #article-content-wrapper .card .card-body .judul-berita {
 	color: #519548;
 }
@@ -63,6 +66,12 @@ nav #navMenu li ul.sub-menu {
 }
 #article-content-wrapper .card .card-body .kategori-berita {
 	background: #519548;
+}
+.komentar .box {
+	border: 1px solid #1B676B !important;
+}
+.komentar .box-header {
+	background: #1B676B !important;
 }
 .mandiri-headline .h3 {
 	color: #fff !important;
