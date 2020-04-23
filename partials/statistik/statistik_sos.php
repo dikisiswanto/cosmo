@@ -1,6 +1,5 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<script src="<?php echo base_url('assets/js/highcharts/highcharts.js')?>"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	new Highcharts.Chart({

@@ -1,7 +1,7 @@
 /**
 
   Style   : Frontend web theme OpenSID
-  Version : 1.3.5
+  Version : 1.4.0
   Author  : Diki Siswanto
 
  **/
@@ -625,6 +625,25 @@ img.lazy, img.owl-lazy {
 	padding-bottom: 100px; 
 }
 
+/* Halaman statis */
+main .box-header h3.box-title {
+	padding: 10px 0;
+	color: #22264b;
+	font-family: Montserrat,sans-serif;
+	font-weight: 700;
+	font-size: calc(21px + 6 * ((100vw - 320px)/ 680));
+}
+
+#jdih-table_wrapper {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+main .box-body .row form .col-md-3:last-child button {
+	margin-bottom: 1rem;
+	margin-top: 0;
+	padding-top: 0;
+}
 /* Footer */
 footer {
 	text-align: center;
@@ -992,6 +1011,10 @@ aside .widget ul.nav.nav-tabs>li a.active.show {
 	border-bottom: 0;
 }
 
+aside #widget-keuangan-container .dropdown-item {
+	padding: 5px 20px;
+}
+
 /* Halaman statistik */
 .box-stats .btn-group {
 	border: 1px solid #007bff;
@@ -1149,6 +1172,20 @@ aside .widget ul.nav.nav-tabs>li a.active.show {
 	}
 	aside .widget .box h3.box-title {
 		font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+	}
+	main .box-body .row form {
+		display: flex;
+		width: 100%;
+		padding: 35px 0 10px;
+	}
+	main .box-body .row form .col-md-3:last-child {
+		display: flex;
+		align-items: flex-end;
+	}
+	main .box-body .row form .col-md-3:last-child button{
+		margin-top: 0 !important;
+		margin-bottom: 1rem;
+		display: block;
 	}
 }
 @media screen and (max-width: 767px){
