@@ -10,7 +10,7 @@
 		<div class="container">
 			<?php if(empty($_GET['cari']) AND $headline AND $this->uri->segment(2) != 'kategori') : ?>
 			<?php $abstrak_headline = potong_teks($headline['isi'], 250); ?>
-			<?php $url = site_url("first/artikel/$headline[id]"); ?>
+			<?php $url = site_url("first/artikel/".buat_slug($headline)); ?>
 				<div class="col-12 mt-2 px-0">
 					<div class="headline">
 						<div class="jumbotron jumbotron-fluid">
@@ -44,7 +44,7 @@
 					<div class="row mb-5 mx-auto justify-content-center" id="article-content-wrapper">
 						<?php if($artikel) : ?>
 							<?php foreach($artikel as $data) : ?>
-								<?php $url = site_url('first/artikel/'.$data['id']) ?>
+								<?php $url = site_url('first/artikel/'.buat_slug($data)) ?>
 								<?php $abstrak = potong_teks($data['isi'], 180) ?>
 								<div class="col-lg-4 col-md-6 col-sm-12 mb-4">
 									<div class="card">
@@ -60,7 +60,7 @@
 											</div>
 										<div class="card-body">
 											<?php if($data['kategori'] && trim($data['kategori'] != '')) : ?>
-												<a href="<?= site_url('first/kategori/' . $data['id_kategori']) ?>">
+												<a href="<?= site_url('first/kategori/' . $data['kat_slug']) ?>">
 													<span class="kategori-berita"><?= $data['kategori'] ?></span>
 												</a>
 											<?php endif ?>
@@ -100,30 +100,6 @@
 			<?php if($artikel) : ?>
 				<?php $this->load->view($folder_themes .'/commons/paging') ?>
 			<?php endif ?>
-		</div>
-	</section>
-	<section id="telusuri-by">
-		<div class="container">
-			<div class="kolom-telusuri">
-				<div class="item-telusuri berita">
-					<a href="<?= site_url('first/kategori/1') ?>" title="Berita Desa">
-						<i class="fa fa-newspaper"></i>
-						<span>Berita</span>
-					</a>
-				</div>
-				<div class="item-telusuri agenda">
-					<a href="<?= site_url('first/kategori/4') ?>" title="Agenda Desa">
-						<i class="fa fa-calendar-alt"></i>
-						<span>Agenda</span>
-					</a>
-				</div>
-				<div class="item-telusuri peraturan">
-					<a href="<?= site_url('first/kategori/5') ?>" title="Peraturan Desa">
-						<i class="fa fa-gavel"></i>
-						<span>Peraturan</span>
-					</a>
-				</div>
-			</div>
 		</div>
 	</section>
 	<?php $this->load->view($folder_themes .'/partials/mandiri/mandiri_login') ?>
@@ -171,6 +147,6 @@
 			</div>
 		</section>
 	<?php endif ?>
-	<?php $this->load->view($folder_themes . '/partials/apdes.php') ?>
+	<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa.php', $transparansi) ?>
 </div>
 
