@@ -8,10 +8,13 @@
 	<?php $this->load->view($folder_themes . '/commons/source_js') ?>
 </head>
 <body>
-	<div id="loader-wrapper">
-		<div id="loader"></div>
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
+	<div id="loader">
+		<div class="folding-cube">
+			<div class="sk-cube1 cube"></div>
+			<div class="cube2 cube"></div>
+			<div class="cube4 cube"></div>
+			<div class="cube3 cube"></div>
+		</div>
 	</div>
 	<?php $modul = array(1,2,3,4) ?>
 	<?php if(in_array($m, $modul)) : ?>
