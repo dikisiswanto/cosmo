@@ -6,7 +6,7 @@
 	const KODE_KOTA = "<?= config_item('kode_kota') ?: JAKARTA ?>";
 	const TANGGAL = "<?= date('Y-m-d') ?>";  
 </script>
-<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/widget.js") ?>"></script>
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/widget.min.js") ?>"></script>
 
 <section id="jadwal-shalat" class="py-4 bg-white">
 	<div class="container">
