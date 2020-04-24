@@ -1,11 +1,16 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div id="main-content">
-	<?php 
-		if ((empty($_GET['cari'])) && ((count($slide_galeri)>0 || count($slide_artikel)>0)) AND $this->uri->segment(2) != 'kategori') {
-			$this->load->view($folder_themes .'/partials/slider.php');
-		}
-	?>
+	<div class="p-relative">
+		<?php 
+			if ((empty($_GET['cari'])) && ((count($slide_galeri)>0 || count($slide_artikel)>0)) AND $this->uri->segment(2) != 'kategori') {
+				$this->load->view($folder_themes .'/partials/slider');
+			}
+		?>
+		<div class="p-absolute">
+			<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
+		</div>
+	</div>
 	<section id="artikel-area" class="py-3">
 		<div class="container">
 			<?php if(empty($_GET['cari']) AND $headline AND $this->uri->segment(2) != 'kategori') : ?>
@@ -147,6 +152,6 @@
 			</div>
 		</section>
 	<?php endif ?>
-	<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa.php', $transparansi) ?>
+	<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa', $transparansi) ?>
 </div>
 

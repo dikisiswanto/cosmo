@@ -5,6 +5,7 @@
 <head>
 	<?php $this->load->view($folder_themes .'/commons/meta') ?>
 	<?php $this->load->view($folder_themes .'/commons/source_css') ?>
+	<?php $this->load->view($folder_themes .'/commons/source_js') ?>
 </head>
 <body>
 	<div id="loader">
@@ -23,6 +24,5 @@
 			<?php $this->load->view($folder_themes .'/partials/content') ?>
 			<?php $this->load->view($folder_themes .'/commons/footer') ?>
 	<?php endif ?>
-	<?php $this->load->view($folder_themes .'/commons/source_js') ?>
 </body>
 </html>
