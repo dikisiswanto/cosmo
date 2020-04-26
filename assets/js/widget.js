@@ -1,49 +1,129 @@
+var regions = {
+	indonesia: {
+		id: 1,
+		attributes: {
+			wilayah: 'name',
+			positif: 'positif',
+			meninggal: 'meninggal',
+			sembuh: 'sembuh'
+		}
+	},
+	provinsi: {
+		id: 2,
+		attributes: {
+			wilayah: 'Provinsi',
+			positif: 'Kasus_Posi',
+			meninggal: 'Kasus_Meni',
+			sembuh: 'Kasus_Semb'
+		}
+	}
+}
+
+function numberFormat(num) {
+	return new Intl.NumberFormat('id-ID').format(num);
+}
+
+function parseToNum(data) {
+	return parseFloat(data.toString().replace(/,/g, ''));
+}
+
+function showCovidData(data, region) {
+	const elem = region.id === regions.indonesia.id ? '#covid-nasional' : '#covid-provinsi';
+	Object.keys(region.attributes).forEach(function (prop) {
+		let tempData = data[region.attributes[prop]];
+		let finalData = prop === 'wilayah' ? tempData.toUpperCase() : numberFormat(parseToNum(tempData));
+		$(elem).find(`[data-name=${prop}]`).html(`${finalData}`);
+	});
+
+	$(elem).find('.shimmer').removeClass('shimmer');
+}
+
+function showError(elem = '') {
+	$(`${elem} .shimmer`).html('<span class="small"><i class="fa fa-exclamation-triangle"></i> Gagal memuat...</span>');
+	$(`${elem} .shimmer`).removeClass('shimmer');
+}
+
 $(document).ready(function () {
 	if ($('#jadwal-shalat').length) {
 
-		const BASE_API_URL = 'https://api.banghasan.com/'; 
-		const endpoint_nama_kota = `sholat/format/json/kota/kode/${KODE_KOTA}`;
-		const endpoint_jadwal = `sholat/format/json/jadwal/kota/${KODE_KOTA}/tanggal/${TANGGAL}`;
+		const SHALAT_API_URL = 'https://api.banghasan.com/';
+		const ENDPOINT_KOTA = `sholat/format/json/kota/kode/${KODE_KOTA}`;
+		const ENDPOINT_JADWAL = `sholat/format/json/jadwal/kota/${KODE_KOTA}/tanggal/${TANGGAL}`;
 
 		try {
-			// get nama kota
 			$.ajax({
-				url: BASE_API_URL + endpoint_nama_kota,
-				type: 'get',
-				dataType: 'json',
-				crossDomain: true,
+				async: true,
+				cache: true,
+				url: SHALAT_API_URL + ENDPOINT_KOTA,
 				success: function (res) {
 					$('[data-name=kota]').html(res.kota[0].nama).removeClass('shimmer line-short');
 				},
 				error: function (err) {
-					$('.line-short').html(`<span class="small"><i class="fa fa-exclamation-triangle pr-1"></i> Gagal memuat</span>`);
-					$('.line-short').removeClass('shimmer line-short');
+					showError('#jadwal-shalat');
 				}
 			});
-	
-			// get jadwal sholat
+
 			$.ajax({
-				url: BASE_API_URL + endpoint_jadwal,
-				type: 'get',
-				dataType: 'json',
-				crossDomain: true,
+				url: SHALAT_API_URL + ENDPOINT_JADWAL,
+				async: true,
+				cache: true,
 				success: function (res) {
-					$('.shimmer').removeClass('shimmer');
-					$('[data-name=imsak]').html(`<span class="small">Imsak</span><span>${res.jadwal.data.imsak}</span>`);
-					$('[data-name=subuh]').html(`<span class="small">Subuh</span><span>${res.jadwal.data.subuh}</span>`);
-					$('[data-name=dzuhur]').html(`<span class="small">Dzuhur</span><span>${res.jadwal.data.dzuhur}</span>`);
-					$('[data-name=ashar]').html(`<span class="small">Ashar</span><span>${res.jadwal.data.ashar}</span>`);
-					$('[data-name=maghrib]').html(`<span class="small">Maghrib</span><span>${res.jadwal.data.maghrib}</span>`);
-					$('[data-name=isya]').html(`<span class="small">Isya</span><span>${res.jadwal.data.isya}</span>`);
+					$('#jadwal-shalat .shimmer').removeClass('shimmer');
+					const attrs = ['imsak', 'subuh', 'dzuhur', 'ashar', 'maghrib', 'isya'];
+					attrs.forEach(function (val) {
+						$(`[data-name=${val}]`).html(`<span class="small">${val}</span><span>${res.jadwal.data[val]}</span>`);
+					})
 				},
 				error: function (err) {
-					$('.box-shalat').html(`<span class="small"><i class="fa fa-exclamation-triangle pr-1"></i> Gagal memuat</span>`);
-					$('.box-shalat').removeClass('shimmer');
+					showError('#jadwal-shalat');
 				}
 			});
-		} catch(err) {
-			console.log(err);
+		} catch (err) {
+			showError('#jadwal-shalat');
 		}
-		
+
+	}
+
+	if ($('#covid-nasional').length) {
+		const COVID_API_URL = 'https://api.kawalcorona.com/';
+		const ENDPOINT_NASIONAL = '/indonesia/';
+		const ENDPOINT_PROVINSI = '/indonesia/provinsi/';
+
+		try {
+			$.ajax({
+				async: true,
+				cache: true,
+				url: COVID_API_URL + ENDPOINT_NASIONAL,
+				success: function (response) {
+					const data = response[0];
+					showCovidData(data, regions.indonesia);
+				},
+				error: function (error) {
+					showError('#covid-nasional');
+				}
+			})
+		} catch (error) {
+			showError('#covid-nasional');
+		}
+
+		if (KODE_PROVINSI) {
+			try {
+				$.ajax({
+					async: true,
+					cache: true,
+					url: COVID_API_URL + ENDPOINT_PROVINSI,
+					success: function (response) {
+						const data = response.filter(data => data.attributes.Kode_Provi == KODE_PROVINSI);
+						data.length ? showCovidData(data[0]['attributes'], regions.provinsi) : showError('#covid-provinsi');
+					},
+					error: function (error) {
+						showError('#covid-provinsi');
+					}
+				})
+			} catch (error) {
+				showError('#covid-provinsi')
+			}
+		}
+
 	}
 })

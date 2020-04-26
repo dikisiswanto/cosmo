@@ -1,16 +1,19 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div id="main-content">
-	<div class="p-relative">
-		<?php 
-			if ((empty($_GET['cari'])) && ((count($slide_galeri)>0 || count($slide_artikel)>0)) AND $this->uri->segment(2) != 'kategori') {
-				$this->load->view($folder_themes .'/partials/slider');
-			}
-		?>
-		<div class="p-absolute">
-			<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
-		</div>
-	</div>
+	<?php 
+		if ((empty($_GET['cari'])) && ((count($slide_galeri)>0 || count($slide_artikel)>0)) AND $this->uri->segment(2) != 'kategori') {
+			$this->load->view($folder_themes .'/partials/slider');
+		}
+	?>
+	<section id="widget-temporer" class="bg-white py-5">
+		<div class="container"><h2 class="h3 font-weight-bold my-0 judul-artikel d-inline-block border-bottom">Jadwal Sholat</h2></div>
+		<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
+		<?php if(config_item('covid_data')) : ?>
+			<div class="container"><h2 class="h3 font-weight-bold py-2 mb-0 judul-artikel d-inline-block border-bottom">Status COVID-19</h2></div>
+			<?php $this->load->view($folder_themes . '/widgets/covid19') ?>
+		<?php endif ?>
+	</section>
 	<section id="artikel-area" class="py-3">
 		<div class="container">
 			<?php if(empty($_GET['cari']) AND $headline AND $this->uri->segment(2) != 'kategori') : ?>
