@@ -28,6 +28,10 @@
 										<?= $single_artikel['kategori'] ?>
 									</span>
 								<?php endif ?>
+								<span>
+									<i class="fa fa-check-double"></i>
+									Dibaca <?= hit($single_artikel['hit']) ?>
+								</span>
 							</div>
 							<?php if($single_artikel['gambar'] != '' && is_file(LOKASI_FOTO_ARTIKEL.'sedang_'.$single_artikel['gambar'])) : ?>
 							<figure class="foto-artikel">

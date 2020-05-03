@@ -4,7 +4,7 @@
 	<?php 
 	$k = array();
 	foreach ($komentar as $data) {
-		if ($data['enabled'] == 1) {
+		if ($data['is_archived'] != 1) {
 			array_push($k, $data);
 		}
 	}
