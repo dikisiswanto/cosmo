@@ -2,19 +2,53 @@
 
 <script src="<?= base_url('assets/js/highcharts/highcharts-more.js')?>"></script>
 <script src="<?= base_url('assets/js/highcharts/exporting.js')?>"></script>
-<?php if($tipe==1) : ?>
 <script type="text/javascript">
-$(document).ready(function() {
-	new Highcharts.Chart({
-		chart: { renderTo: 'container'},
-		title:0,
-				xAxis: {
-					categories: [
-					<?php  $i=0;foreach($stat as $data){$i++;?>
-					  <?php if($data['jumlah'] != "-" AND $data['nama']!= "TOTAL" AND $data['nama']!= "JUMLAH"){echo "'$i',";}?>
-					<?php }?>
-					]
-				},
+	const rawData = Object.values(<?= json_encode($stat) ?>);
+	const type = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
+	const legend = Boolean(<?= !($tipe) ?>);
+	const categories = [];
+	const data = [];
+	let status_tampilkan = true;
+	for (const stat of rawData) {
+		if (stat.nama !== 'BELUM MENGISI' && stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH') {
+			let filteredData = [stat.nama, parseInt(stat.jumlah)];
+			let category = stat.nama;
+			categories.push(category);
+			data.push(filteredData);
+		}
+	}
+
+	function tampilkan_nol(tampilkan = false) {
+		if (tampilkan) {
+			$(".nol").parent().show();
+		} else {
+			$(".nol").parent().hide();
+		}
+	}
+
+	function toggle_tampilkan() {
+		$('#showData').click();
+		tampilkan_nol(status_tampilkan);
+		status_tampilkan = !status_tampilkan;
+		if (status_tampilkan) $('#tampilkan').text('Tampilkan Nol');
+		else $('#tampilkan').text('Sembunyikan Nol');
+	}
+
+	$(document).ready(function () {
+		tampilkan_nol(false);
+		const chart = new Highcharts.Chart({
+			chart: {
+				renderTo: 'container'
+			},
+			title: 0,
+			xAxis: {
+				categories: categories,
+			},
+			yAxis: {
+				title: {
+					text: 'Jumlah Populasi'
+				}
+			},
 			plotOptions: {
 				series: {
 					colorByPoint: true
@@ -22,70 +56,32 @@ $(document).ready(function() {
 				column: {
 					pointPadding: -0.1,
 					borderWidth: 0
+				},
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					showInLegend: true
 				}
 			},
-				legend: {
-					enabled:false
-				},
-		series: [{
-			type: 'column',
-			name: 'Jumlah Populasi',
-			shadow:1,
-			border:1,
-			data: [
-					<?php  foreach($stat as $data){?>
-						<?php if($data['jumlah'] != "-" AND $data['nama']!= "TOTAL" AND $data['nama']!= "JUMLAH"){?>
-							['<?= $data['nama']?>',<?= $data['jumlah']?>],
-						<?php }?>
-					<?php }?>
-			]
-		}]
-	});
-});
-</script>
+			legend: {
+				enabled: legend
+			},
+			series: [{
+				type: type,
+				name: 'Jumlah Populasi',
+				shadow: 1,
+				border: 1,
+				data: data
+			}]
+		});
 
-<?php else : ?>
-
-<script type="text/javascript">
- $(document).ready(function () {
-	// Build the chart
-	new Highcharts.Chart({
-		chart: {
-			renderTo: 'container'
-		},
-		title:0,
-		plotOptions: {
-			pie: {
-				allowPointSelect: true,
-				cursor: 'pointer',
-				showInLegend: true
-			}
-		},
-		series: [{
-			type: 'pie',
-			name: 'Jumlah Populasi',
-			shadow:1,
-			border:1,
-			data: [
-					<?php  foreach($stat as $data):?>
-						<?php if($data['jumlah'] != "-" AND $data['nama']!= "TOTAL" AND $data['nama']!= "JUMLAH") : ?>
-							['<?= $data['nama']?>',<?= $data['jumlah']?>],
-						<?php endif; ?>
-					<?php endforeach; ?>
-			]
-		}]
+		$('#showData').click(function () {
+			$('tr.lebih').show();
+			$('#showData').hide();
+			tampilkan_nol(false);
+		});
+				
 	});
-});
-</script>
-<?php endif; ?>
-
-<script>
-$(function(){
-	$('#showData').click(function(){
-		$('tr.tr-lebih').removeClass('d-none');
-		$('#showData').hide();
-	});
-});
 </script>
 
 <div class="stat">
@@ -139,37 +135,41 @@ $(function(){
 			</tr>
 			</thead>
 			<tbody>
-			<?php $i=0; $l=0; $p=0; ?>
-			<?php $hide=''; $not_hide=0; ?>
-			<?php $jml = count($stat); ?>
-			<?php foreach($stat as $data) : ?>
-				<?php $not_hide++; ?>
-				<?php if($not_hide > 10 && $jml > 11) : ?>
-					<?php $hide = 'tr-lebih d-none' ?>
-				<?php endif ?>
-				<tr class="<?= $hide ?>">
-					<td class="text-right"><?= $data['no'] ?></td>
-					<td><?= $data['nama'] ?></td>
-					<td class="text-right"><?= $data['jumlah'] ?></td>
-					<td class="text-right"><?= $data['persen'] ?></td>
-					<?php if($jenis_laporan == 'penduduk') : ?>
-						<td class="text-right"><?= $data['laki'] ?></td>
-						<td class="text-right"><?= $data['persen1'] ?></td>
-						<td class="text-right"><?= $data['perempuan'] ?></td>
-						<td class="text-right"><?= $data['persen2'] ?></td>
-					<?php endif ?>
-				</tr>
-				<?php 
-					$i = $i+$data['jumlah'];
-					$l = $l+$data['laki'];
-					$p = $p+$data['perempuan'];
-				?>
-			<?php endforeach ?>
+			<?php $i=0; $l=0; $p=0; $hide=""; $h=0; $jm1=1; $jm = count($stat);?>
+			<?php foreach ($stat as $data):?>
+				<?php $jm1++; if (1):?>
+					<?php $h++; if ($h > 12 AND $jm > 10): $hide="lebih"; ?>
+					<?php endif;?>
+					<tr class="<?=$hide?>">
+						<td class="angka">
+							<?php if ($jm1 > $jm - 2):?>
+								<?=$data['no']?>
+							<?php else:?>
+								<?=$h?>
+							<?php endif;?>
+						</td>
+						<td><?=$data['nama']?></td>
+						<td class="angka <?php ($jm1 <= $jm - 2) and ($data['jumlah'] == 0) and print('nol')?>"><?=$data['jumlah']?></td>
+						<td class="angka"><?=$data['persen']?></td>
+						<?php if ($jenis_laporan == 'penduduk'):?>
+							<td class="angka"><?=$data['laki']?></td>
+							<td class="angka"><?=$data['persen1']?></td>
+							<td class="angka"><?=$data['perempuan']?></td>
+							<td class="angka"><?=$data['persen2']?></td>
+						<?php endif;?>
+					</tr>
+					<?php $i += $data['jumlah'];?>
+					<?php $l += $data['laki']; $p += $data['perempuan'];?>
+				<?php endif;?>
+			<?php endforeach;?>
 			</tbody>
 		</table>
 
-		<?php if($hide == "tr-lebih d-none") : ?>
-		<button class='btn btn-sm btn-success' id='showData'>Selengkapnya...</button>
+		<div class="d-flex justify-content-start">
+		<?php if($hide == "lebih") : ?>
+		<button class='btn btn-sm btn-success mr-3' id='showData'>Selengkapnya...</button>
 		<?php endif ?>
+		<button id='tampilkan' onclick="toggle_tampilkan();" class="btn btn-sm btn-success">Tampilkan Nol</button>
+		</div>
 	</div>
 </div>
