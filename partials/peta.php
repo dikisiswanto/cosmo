@@ -6,7 +6,7 @@
 <section id="main-content">
 	<main>
 		<div class="container">
-						<?php $this->load->view($halaman_peta); ?>
+			<?php $this->load->view($halaman_peta); ?>
 		</div>
 	</main>
 </section>
