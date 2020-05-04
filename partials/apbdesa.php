@@ -12,7 +12,7 @@
 						</div>
 						<div class="box-body my-4">
 							<?php foreach($subdatas as $key => $subdata) : ?>
-								<?php if(!empty($subdata['judul']) && $key != 'laporan') : ?>
+								<?php if($subdata['judul'] != NULL and $key != 'laporan' and $subdata['realisasi'] != 0 or $subdata['anggaran'] != 0): ?>	
 									<div class="item-apdes mb-2">
 										<span class="small font-weight-bold"><?= $subdata['judul'] ?></span>
 										<div class="d-flex justify-content-between w-100 pb-2 small">
