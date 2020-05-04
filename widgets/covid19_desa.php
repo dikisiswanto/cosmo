@@ -1,3 +1,14 @@
+<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<?php
+//API Local Data COVID19
+$odp = $covid[0]; //"Orang Dalam Pemantauan (ODP)" => "ODP",
+$pdp = $covid[1]; //"Pasien Dalam Pengawasan (PDP)" => "PDP",
+$odr = $covid[2]; //"Orang Dalam Resiko (ODR)" => "ODR"
+$otg = $covid[3]; //"Orang Tanpa Gejala (OTG)" => "OTG",
+$positif = $covid[4]; //"Positif Covid-19" => "POSITIF",
+?>
+
 <section id="covid-desa" class="py-4 bg-white">
 	<p class="font-weight-bold text-muted m-0 mb-2" data-name="wilayah">
 		<?= strtoupper($this->setting->sebutan_desa . ' ' . $desa['nama_desa']); ?></p>
