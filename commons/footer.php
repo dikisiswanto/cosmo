@@ -1,5 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa', $transparansi) ?>
+
 <footer>
 	<div class="container">
 		<div class="row">
