@@ -107,6 +107,12 @@
   animation-timing-function: linear;
 }
 
+.search-form-open #jadwal-shalat {
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	box-shadow: none;
+}
+
 @keyframes placeholderShimmer {
   0% {
     background-position: -468px 0;
