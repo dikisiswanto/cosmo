@@ -1,7 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div id="main-content">
-	<?php 
+	<?php
 		if ((empty($_GET['cari'])) && ((count($slide_galeri)>0 || count($slide_artikel)>0)) AND $this->uri->segment(2) != 'kategori') {
 			$this->load->view($folder_themes .'/partials/slider');
 		}
@@ -55,7 +55,7 @@
 			</div>
 			<?php endif ?>
 
-			<?php 
+			<?php
 			$title = (!empty($judul_kategori))? $judul_kategori: 'Artikel Terkini';
 				if(is_array($title)){
 					foreach($title as $item){
@@ -175,5 +175,4 @@
 		</div>
 	</section>
 	<?php endif ?>
-	<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa', $transparansi) ?>
 </div>
