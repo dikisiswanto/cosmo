@@ -1,4 +1,4 @@
-var regions = {
+const regions = {
 	indonesia: {
 		id: 1,
 		attributes: {
