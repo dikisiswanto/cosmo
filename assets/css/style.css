@@ -1030,7 +1030,8 @@ aside #widget-keuangan-container .dropdown-item {
 	background: transparent;
 	color: #007bff;
 }
-.stat .tr-lebih {
+.stat .lebih {
+	display: none;
 	transition: all 1s;
 	animation-duration: 1s;
 	animation-name: fadeInDown;
