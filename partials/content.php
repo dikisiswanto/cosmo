@@ -6,31 +6,6 @@
 			$this->load->view($folder_themes .'/partials/slider');
 		}
 	?>
-	<section id="widget-temporer" class="bg-white py-5">
-		<div class="container">
-			<h2 class="h3 font-weight-bold my-0 judul-artikel d-inline-block border-bottom">Jadwal Sholat</h2>
-		</div>
-		<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
-		<div class="py-4 bg-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="h3 font-weight-bold py-2 mb-0 judul-artikel d-inline-block border-bottom">Status COVID-19</h2>
-					</div>
-					<div class="col-lg-7 <?php config_item('covid_desa') and print('border-right pr-lg-4') ?> col-12">
-						<?php if(config_item('covid_data')) : ?>
-						<?php $this->load->view($folder_themes . '/widgets/covid19') ?>
-						<?php endif ?>
-					</div>
-					<div class="<?= config_item('covid_data') ? 'col-lg-5 pl-lg-4' : 'col-lg-8' ?> col-12">
-						<?php if(config_item('covid_desa')) : ?>
-							<?php $this->load->view($folder_themes . '/widgets/covid19_desa') ?>
-						<?php endif ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<section id="artikel-area" class="py-3">
 		<div class="container">
 			<?php if(empty($_GET['cari']) AND $headline AND $this->uri->segment(2) != 'kategori') : ?>
