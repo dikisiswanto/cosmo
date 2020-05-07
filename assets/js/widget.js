@@ -85,7 +85,7 @@ $(document).ready(function () {
 	}
 
 	if ($('#covid-nasional').length) {
-		const COVID_API_URL = 'https://api.kawalcorona.com/';
+		const COVID_API_URL = 'https://api.kawalcorona.com';
 		const ENDPOINT_NASIONAL = '/indonesia/';
 		const ENDPOINT_PROVINSI = '/indonesia/provinsi/';
 
