@@ -86,7 +86,7 @@ $(document).ready(function () {
 
 	if ($('#covid-nasional').length) {
 		const COVID_API_URL = 'https://indonesia-covid-19.mathdro.id/api/';
-		const ENDPOINT_PROVINSI = 'provinsi';
+		const ENDPOINT_PROVINSI = 'provinsi/';
 
 		try {
 			$.ajax({
