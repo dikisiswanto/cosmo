@@ -3,7 +3,7 @@ const regions = {
 		id: 1,
 		attributes: {
 			wilayah: 'name',
-			positif: 'positif',
+			positif: 'jumlahKasus',
 			meninggal: 'meninggal',
 			sembuh: 'sembuh'
 		}
@@ -11,10 +11,10 @@ const regions = {
 	provinsi: {
 		id: 2,
 		attributes: {
-			wilayah: 'Provinsi',
-			positif: 'Kasus_Posi',
-			meninggal: 'Kasus_Meni',
-			sembuh: 'Kasus_Semb'
+			wilayah: 'provinsi',
+			positif: 'kasusPosi',
+			meninggal: 'kasusMeni',
+			sembuh: 'kasusSemb'
 		}
 	}
 }
@@ -85,17 +85,17 @@ $(document).ready(function () {
 	}
 
 	if ($('#covid-nasional').length) {
-		const COVID_API_URL = 'https://api.kawalcorona.com';
-		const ENDPOINT_NASIONAL = '/indonesia/';
-		const ENDPOINT_PROVINSI = '/indonesia/provinsi/';
+		const COVID_API_URL = 'https://indonesia-covid-19.mathdro.id/api/';
+		const ENDPOINT_PROVINSI = 'provinsi';
 
 		try {
 			$.ajax({
 				async: true,
 				cache: true,
-				url: COVID_API_URL + ENDPOINT_NASIONAL,
+				url: COVID_API_URL,
 				success: function (response) {
-					const data = response[0];
+					const data = response;
+					data.name = 'Indonesia';
 					showCovidData(data, regions.indonesia);
 				},
 				error: function (error) {
@@ -113,8 +113,8 @@ $(document).ready(function () {
 					cache: true,
 					url: COVID_API_URL + ENDPOINT_PROVINSI,
 					success: function (response) {
-						const data = response.filter(data => data.attributes.Kode_Provi == KODE_PROVINSI);
-						data.length ? showCovidData(data[0]['attributes'], regions.provinsi) : showError('#covid-provinsi');
+						const data = response.data.filter(data => data.kodeProvi == KODE_PROVINSI);
+						data.length ? showCovidData(data[0], regions.provinsi) : showError('#covid-provinsi');
 					},
 					error: function (error) {
 						showError('#covid-provinsi');
