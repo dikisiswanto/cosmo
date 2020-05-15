@@ -25,7 +25,7 @@
 							<?= tgl_indo($data["tgl_upload"])?>
 						</td>
 						<td>
-							<a href="<?= site_url('first/artikel/'.$data[id])?>"><?= $data["judul"]?></a>
+							<a href="<?= site_url('artikel/'.buat_slug($data))?>"><?= $data["judul"]?></a>
 						</td>
 						<td style="text-align:center;">
 							<?= $data["owner"]?>
