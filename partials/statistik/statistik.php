@@ -80,7 +80,7 @@
 			$('#showData').hide();
 			tampilkan_nol(false);
 		});
-				
+
 	});
 </script>
 
@@ -126,7 +126,7 @@
 			<tr>
 				<th class="text-right">n</th>
 				<th class="text-right">%</th>
-				<?php if($jenis_laporan == 'penduduk'):?>	
+				<?php if($jenis_laporan == 'penduduk'):?>
 					<th class="text-right">n</th>
 					<th class="text-right">%</th>
 					<th class="text-right">n</th>
@@ -165,11 +165,76 @@
 			</tbody>
 		</table>
 
-		<div class="d-flex justify-content-start">
 		<?php if($hide == "lebih") : ?>
+			<div style='float: left;'>
 		<button class='btn btn-sm btn-success mr-3' id='showData'>Selengkapnya...</button>
+		</div>
 		<?php endif ?>
+		<div style="float: right;">
 		<button id='tampilkan' onclick="toggle_tampilkan();" class="btn btn-sm btn-success">Tampilkan Nol</button>
 		</div>
+
 	</div>
 </div>
+
+<?php if (in_array($st, array('bantuan_keluarga', 'bantuan_penduduk'))):?>
+	<section class="content" id="maincontent">
+		<div class="row">
+				<input id="stat" type="hidden" value="<?=$st?>">
+				<div class="box box-info">
+					<div class="box-header with-border" style="margin-bottom: 15px;">
+						<div class="col-7"><h5 class="font-weight-bold"><?= $heading ?></h5></div>
+					</div>
+					<div style="margin-right: 1rem; margin-left: 1rem;">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered" id="peserta_program">
+								<thead>
+									<tr>
+				      		  <th>No</th>
+										<th>Program</th>
+				      		  <th>Nama Peserta</th>
+				      		  <th>Alamat</th>
+									</tr>
+								</thead>
+					      <tfoot>
+					      </tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+		  var url = "<?= site_url('first/ajax_peserta_program_bantuan')?>";
+		    table = $('#peserta_program').DataTable({
+		      'processing': true,
+		      'serverSide': true,
+		      "pageLength": 10,
+		      'order': [],
+		      "ajax": {
+		        "url": url,
+		        "type": "POST",
+		        "data": {stat: $('#stat').val()}
+		      },
+		      //Set column definition initialisation properties.
+		      "columnDefs": [
+		        {
+		          "targets": [ 0, 3 ], //first column / numbering column
+		          "orderable": false, //set not orderable
+		        },
+		      ],
+		      'language': {
+		        'url': BASE_URL + '/assets/bootstrap/js/dataTables.indonesian.lang'
+		      },
+		      'drawCallback': function (){
+		          $('.dataTables_paginate > .pagination').addClass('pagination-sm no-margin');
+		      }
+		    });
+
+		} );
+	</script>
+
+<?php endif;?>
