@@ -79,6 +79,9 @@ $(window).ready(function(){
 		threshold: 0,
 		delay: 3500,
 	});
+	const activeElem = $('.nav-tabs>li:first-child').find('a').attr('href');
 	$('.nav-tabs>li:first-child').find('a').addClass('active show');
-	$('.tab-content div:first-child').addClass('active show');
+	$('#arsip_artikel .tab-content div:first-child').addClass('active show');
+	$(activeElem).addClass('active show');
+	$(activeElem).removeClass('fade in');
 })
