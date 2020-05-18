@@ -5,36 +5,13 @@
 		<div class="container">
 			<div class="social-link justify-content-start">
 				<ul>
-					<?php if($sosmed[nested_array_search('Facebook',$sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('Facebook', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('Facebook',$sosmed)]['link'] ?>" target="_blank"><i class="fab fa-facebook"></i></a>
-						</li>
-					<?php endif ?>
-					<?php if($sosmed[nested_array_search('Twitter', $sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('Twitter', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('Twitter', $sosmed)]['link'] ?>" target="_blank"><i class="fab fa-twitter"></i></a>
-						</li>
-					<?php endif ?>
-					<?php if($sosmed[nested_array_search('Google Plus', $sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('Google Plus', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('Google Plus', $sosmed)]['link'] ?>" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-						</li>
-					<?php endif ?>
-					<?php if($sosmed[nested_array_search('Instagram', $sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('Instagram', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('Instagram', $sosmed)]['link'] ?>" target="_blank"><i class="fab fa-instagram"></i></a>
-						</li>
-					<?php endif ?>
-					<?php if($sosmed[nested_array_search('YouTube', $sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('YouTube', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('YouTube', $sosmed)]['link'] ?>" target="_blank"><i class="fab fa-youtube"></i></a>
-						</li>
-					<?php endif ?>
-					<?php if($sosmed[nested_array_search('WhatsApp', $sosmed)]['enabled'] == 1 && $sosmed[nested_array_search('WhatsApp', $sosmed)]['link']) : ?>
-						<li>
-							<a href="<?= $sosmed[nested_array_search('WhatsApp', $sosmed)]['link'] ?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
-						</li>
-					<?php endif ?>
+					<?php foreach ($sosmed As $data): ?>
+						<?php if (!empty($data["link"])): ?>
+							<li>
+								<a href="<?= $data['link']?>" target="_blank"><i class="fab fa-<?= strtolower(str_replace(' ', '-', $data['nama']))?>"></i></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 			<div class="meta-desa justify-content-end">
@@ -75,7 +52,7 @@
 					</h1>
 					<div class="ket">
 						<span>
-						<?= ucfirst($this->setting->sebutan_kecamatan_singkat) ?> 
+						<?= ucfirst($this->setting->sebutan_kecamatan_singkat) ?>
 						<?= ucwords($desa['nama_kecamatan']) ?>
 						<?= ucfirst($this->setting->sebutan_kabupaten_singkat) ?>
 						<?= ucwords($desa['nama_kabupaten']) ?>
