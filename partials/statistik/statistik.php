@@ -2,54 +2,54 @@
 
 <script type="text/javascript">
 	let chart;
-	const rawData = Object.values(<?= json_encode($stat) ?>);
-	const type = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
+	const raw = Object.values(<?= json_encode($stat) ?>);
+	let chartType = 'pie';
 	const legend = Boolean(!<?= ($tipe) ?>);
-	let categories = [];
-	let data = [];
-	let i = 1;
-	let status_tampilkan = true;
-	for (const stat of rawData) {
+	const categories = [];
+	const data = [];
+	let showStatus = true;
+	for (const stat of raw) {
 		if (stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH' && stat.nama != 'PENERIMA') {
 			let filteredData = [stat.nama, parseInt(stat.jumlah)];
-			categories.push(i);
+			categories.push(stat.nama);
 			data.push(filteredData);
-			i++;
 		}
 	}
 
-	function tampilkan_nol(tampilkan = false) {
-		if (tampilkan) {
+	function showZeroValue(show = false) {
+		if (show) {
 			$(".nol").parent().show();
 		} else {
 			$(".nol").parent().hide();
 		}
 	}
 
-	function toggle_tampilkan() {
+	function showHideToggle() {
 		$('#showData').click();
-		tampilkan_nol(status_tampilkan);
-		status_tampilkan = !status_tampilkan;
-		if (status_tampilkan) $('#tampilkan').text('Tampilkan Nol');
+		showZeroValue(showStatus);
+		showStatus = !showStatus;
+		if (showStatus) $('#tampilkan').text('Tampilkan Nol');
 		else $('#tampilkan').text('Sembunyikan Nol');
 	}
 
-	function switchType(){
-		var chartType = chart_penduduk.series[0].type;
-		chart_penduduk.series[0].update({
-			type: (chartType === 'pie') ? 'column' : 'pie'
+	function switchType(type){
+		chart.series[0].update({
+			type: type
 		});
 	}
 
 	$(document).ready(function () {
-		tampilkan_nol(false);
-		chart_penduduk = new Highcharts.Chart({
+		showZeroValue(false);
+		chart = new Highcharts.Chart({
 			chart: {
 				renderTo: 'container'
 			},
 			title: 0,
 			yAxis: {
 				showEmpty: false,
+				title: {
+					text: 'Jumlah Populasi'
+				}
 			},
 			xAxis: {
 				categories: categories,
@@ -73,7 +73,7 @@
 				enabled: legend
 			},
 			series: [{
-				type: type,
+				type: chartType,
 				name: 'Jumlah Populasi',
 				shadow: 1,
 				border: 1,
@@ -84,8 +84,17 @@
 		$('#showData').click(function () {
 			$('tr.lebih').show();
 			$('#showData').hide();
-			tampilkan_nol(false);
+			showZeroValue(false);
 		});
+
+		$('.btn-switch').click(function () {
+			chartType = $(this).data('type');
+			$(this).addClass('btn-primary');
+			$(this).removeClass('btn-default')
+			$(this).siblings('.btn').removeClass('btn-primary');
+			$(this).siblings('.btn').addClass('btn-default');
+			switchType(chartType);
+		})
 
 	});
 </script>
@@ -100,8 +109,8 @@
 			<div class="col-5">
 				<div class="box-stats d-flex justify-content-end">
 					<div class="btn-group btn-group-sm">
-						<a class="btn <?= ($tipe==1) ? 'btn-primary' : 'btn-default' ?> btn-xs" onclick="switchType();">Bar Graph</a>
-						<a class="btn <?= ($tipe==0) ? 'btn-primary' : 'btn-default' ?> btn-xs" onclick="switchType();">Pie Cart</a>
+						<button class="btn-switch btn btn-default btn-xs" data-type="column">Bar Graph</button>
+						<button class="btn-switch btn btn-primary btn-xs" data-type="pie">Pie Chart</button>
 					</div>
 				</div>
 			</div>
@@ -176,7 +185,7 @@
 			<?php if($hide == "lebih") : ?>
 			<button class='btn btn-sm btn-success mr-3' id='showData'>Selengkapnya...</button>
 			<?php endif ?>
-			<button id='tampilkan' onclick="toggle_tampilkan();" class="btn btn-sm btn-success">Tampilkan Nol</button>
+			<button id='tampilkan' onclick="showHideToggle();" class="btn btn-sm btn-success">Tampilkan Nol</button>
 		</div>
 	</div>
 
