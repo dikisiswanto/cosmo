@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="social-link justify-content-start">
 				<ul>
-					<?php foreach ($sosmed As $data): ?>
+					<?php foreach ($sosmed as $data): ?>
 						<?php if (!empty($data["link"])): ?>
 							<li>
 								<a href="<?= $data['link']?>" target="_blank"><i class="fab fa-<?= strtolower(str_replace(' ', '-', $data['nama']))?>"></i></a>
