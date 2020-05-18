@@ -9,7 +9,7 @@
 <meta name='theme' content='Cosmos' />
 <meta name='designer' content='Diki Siswanto' />
 <meta name='theme:designer' content='Diki Siswanto' />
-<meta name='theme:version' content='1.6.3' />
+<meta name='theme:version' content='1.6.4' />
 <meta name='keywords' content="sid, sistem informasi desa, web, blog, informasi, website, tema cosmos, desa, kecamatan, kabupaten, indonesia, kampung, <?= $desa['nama_desa']; ?>, <?= $desa['nama_kecamatan']; ?>, <?= $desa['nama_kabupaten']; ?>" />
 <meta property="og:site_name" content="<?= $desa_title ?>"/>
 <meta property="og:type" content="article"/>
