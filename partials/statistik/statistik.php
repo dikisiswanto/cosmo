@@ -1,20 +1,20 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<script src="<?= base_url('assets/js/highcharts/highcharts-more.js')?>"></script>
-<script src="<?= base_url('assets/js/highcharts/exporting.js')?>"></script>
 <script type="text/javascript">
-	const raw = Object.values(<?= json_encode($stat) ?>);
-	const chartType = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
-	const legend = Boolean(<?=!($tipe)?>);
-	const categories = [];
-	const data = [];
+	let chart;
+	const rawData = Object.values(<?= json_encode($stat) ?>);
+	const type = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
+	const legend = Boolean(!<?= ($tipe) ?>);
+	let categories = [];
+	let data = [];
+	let i = 1;
 	let status_tampilkan = true;
-	for (const stat of raw) {
-		if (stat.nama !== 'BELUM MENGISI' && stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH' && stat.nama != 'PENERIMA') {
+	for (const stat of rawData) {
+		if (stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH' && stat.nama != 'PENERIMA') {
 			let filteredData = [stat.nama, parseInt(stat.jumlah)];
-			let category = stat.nama;
-			categories.push(category);
+			categories.push(i);
 			data.push(filteredData);
+			i++;
 		}
 	}
 
@@ -34,20 +34,25 @@
 		else $('#tampilkan').text('Sembunyikan Nol');
 	}
 
+	function switchType(){
+		var chartType = chart_penduduk.series[0].type;
+		chart_penduduk.series[0].update({
+			type: (chartType === 'pie') ? 'column' : 'pie'
+		});
+	}
+
 	$(document).ready(function () {
 		tampilkan_nol(false);
-		const chart = new Highcharts.Chart({
+		chart_penduduk = new Highcharts.Chart({
 			chart: {
 				renderTo: 'container'
 			},
 			title: 0,
+			yAxis: {
+				showEmpty: false,
+			},
 			xAxis: {
 				categories: categories,
-			},
-			yAxis: {
-				title: {
-					text: 'Jumlah Populasi'
-				}
 			},
 			plotOptions: {
 				series: {
@@ -55,7 +60,8 @@
 				},
 				column: {
 					pointPadding: -0.1,
-					borderWidth: 0
+					borderWidth: 0,
+					showInLegend: false
 				},
 				pie: {
 					allowPointSelect: true,
@@ -67,7 +73,7 @@
 				enabled: legend
 			},
 			series: [{
-				type: chartType,
+				type: type,
 				name: 'Jumlah Populasi',
 				shadow: 1,
 				border: 1,
@@ -89,15 +95,13 @@
 	<div class="col-12 px-0 mb-4 mt-3">
 		<div class="row justify-content-between align-content-center">
 			<div class="col-7">
-				<h5 class="font-weight-bold">Grafik Data</h5>
+				<h5 class="font-weight-bold">Grafik <?= $heading ?></h5>
 			</div>
 			<div class="col-5">
 				<div class="box-stats d-flex justify-content-end">
 					<div class="btn-group btn-group-sm">
-						<?php $jenis_btn = ($tipe==1) ? "btn-primary":"btn-default"; ?>
-						<a href="<?= site_url('first/statistik/'.$st.'/1') ?>" class="btn btn-sm <?= $jenis_btn ?>">Bar Graph</a>
-						<?php $jenis_btn = ($tipe==0) ? "btn-primary":"btn-default"; ?>
-						<a href="<?= site_url('first/statistik/'.$st.'/0') ?>" class="btn btn-sm <?= $jenis_btn ?>">Pie Chart</a>
+						<a class="btn <?= ($tipe==1) ? 'btn-primary' : 'btn-default' ?> btn-xs" onclick="switchType();">Bar Graph</a>
+						<a class="btn <?= ($tipe==0) ? 'btn-primary' : 'btn-default' ?> btn-xs" onclick="switchType();">Pie Cart</a>
 					</div>
 				</div>
 			</div>
@@ -111,7 +115,7 @@
 	</div>
 
 	<h5 class="font-weight-bold mt-4">
-		Tabel Data
+		Tabel <?= $heading ?>
 	</h5>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
@@ -178,7 +182,7 @@
 
 	<?php if (in_array($st, array('bantuan_keluarga', 'bantuan_penduduk'))):?>
 		<h5 class="font-weight-bold mt-4">
-			Tabel Data
+			Daftar <?= $heading ?>
 		</h5>
 		<input id="stat" type="hidden" value="<?=$st?>">
 		<div class="table-responsive">
