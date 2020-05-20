@@ -43,7 +43,7 @@
 		<div class="container">
 			<a href="<?= site_url('first'); ?>" class="brand">
 				<div class="logo">
-						<img src="<?= LogoDesa($desa['logo']) ?>" alt="<?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>" class="img-fluid">
+						<img src="<?= gambar_desa($desa['logo']) ?>" alt="<?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>" class="img-fluid">
 				</div>
 				<div class="detail">
 					<h1 class="h1">
