@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="logo">
-				<img src="<?= LogoDesa($desa['logo']) ?>" alt="<?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>" class="img-fluid">
+				<img src="<?= gambar_desa($desa['logo']) ?>" alt="<?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>" class="img-fluid">
 				</div>
 				<div class="detail">
 					<span>
