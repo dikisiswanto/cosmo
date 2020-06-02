@@ -7,10 +7,6 @@
 		}
 	?>
 	<section id="widget-temporer" class="bg-white py-5">
-		<div class="container">
-			<h2 class="h3 font-weight-bold my-0 judul-artikel d-inline-block border-bottom">Jadwal Sholat</h2>
-		</div>
-		<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
 		<div class="py-4 bg-white">
 			<div class="container">
 				<div class="row">

@@ -1,5 +1,6 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/widget.min.js") ?>"></script>
 <script>
 	const KODE_PROVINSI = "<?= config_item('provinsi_covid') ?: 'undefined' ?>";
 </script>

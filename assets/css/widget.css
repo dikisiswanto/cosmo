@@ -14,14 +14,6 @@
   overflow: hidden;
 }
 
-.shalat {
-  background: #1B676B;
-}
-
-.shalat span {
-  text-transform: capitalize;
-}
-
 .covid {
   height: 100px;
   z-index: 10;
