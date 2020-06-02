@@ -44,46 +44,6 @@ function showError(elem = '') {
 }
 
 $(document).ready(function () {
-	if ($('#jadwal-shalat').length) {
-
-		const SHALAT_API_URL = 'https://api.banghasan.com/';
-		const ENDPOINT_KOTA = `sholat/format/json/kota/kode/${KODE_KOTA}`;
-		const ENDPOINT_JADWAL = `sholat/format/json/jadwal/kota/${KODE_KOTA}/tanggal/${TANGGAL}`;
-
-		try {
-			$.ajax({
-				async: true,
-				cache: true,
-				url: SHALAT_API_URL + ENDPOINT_KOTA,
-				success: function (res) {
-					$('[data-name=kota]').html(res.kota[0].nama).removeClass('shimmer line-short');
-				},
-				error: function (err) {
-					showError('#jadwal-shalat');
-				}
-			});
-
-			$.ajax({
-				url: SHALAT_API_URL + ENDPOINT_JADWAL,
-				async: true,
-				cache: true,
-				success: function (res) {
-					$('#jadwal-shalat .shimmer').removeClass('shimmer');
-					const attrs = ['imsak', 'subuh', 'dzuhur', 'ashar', 'maghrib', 'isya'];
-					attrs.forEach(function (val) {
-						$(`[data-name=${val}]`).html(`<span class="small">${val}</span><span>${res.jadwal.data[val]}</span>`);
-					})
-				},
-				error: function (err) {
-					showError('#jadwal-shalat');
-				}
-			});
-		} catch (err) {
-			showError('#jadwal-shalat');
-		}
-
-	}
-
 	if ($('#covid-nasional').length) {
 		const COVID_API_URL = 'https://indonesia-covid-19.mathdro.id/api/';
 		const ENDPOINT_PROVINSI = 'provinsi/';
