@@ -18,7 +18,6 @@
 	</div>
 	<?php $this->load->view($folder_themes . '/commons/header') ?>
 	<?php $this->load->view($folder_themes . '/commons/nav') ?>
-	<?php $this->load->view($folder_themes . '/widgets/jadwal_shalat') ?>
 
 	<section id="main-content">
 		<main>
