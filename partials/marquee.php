@@ -11,9 +11,6 @@
 			<li>
 				<?= $teks['teks']?>
 				<?php if ($teks['tautan']): ?>
-					/* memperbaiki code untul link artikel site.url/artikel/site.url/artikel/to/an/artikel
-					<a href="<?= site_url('artikel/'.$teks['tautan']) ?>"><?= $teks['judul_tautan']?></a>
-					*/
 					<a href="<?=$teks['tautan']?>" target="_blank"><?=$teks['judul_tautan']?></a>
 				<?php endif ?>
 			</li>
