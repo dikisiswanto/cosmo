@@ -11,7 +11,7 @@
 			<li>
 				<?= $teks['teks']?>
 				<?php if ($teks['tautan']): ?>
-					<a href="<?= site_url('artikel/'.$teks['tautan']) ?>"><?= $teks['judul_tautan']?></a>
+					<a href="<?=$teks['tautan']?>" target="_blank"><?=$teks['judul_tautan']?></a>
 				<?php endif ?>
 			</li>
 			<?php endforeach ?>
