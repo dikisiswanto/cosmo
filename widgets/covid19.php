@@ -2,7 +2,7 @@
 
 <script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/widget.min.js") ?>"></script>
 <script>
-	const KODE_PROVINSI = "<?= config_item('provinsi_covid') ?: 'undefined' ?>";
+	const KODE_PROVINSI = "<?= $this->setting->provinsi_covid ?: 'undefined' ?>";
 </script>
 
 <section id="covid-nasional" class="py-4 bg-white">
@@ -32,7 +32,7 @@
 	</div>
 </section>
 
-<?php if(config_item('provinsi_covid')) : ?>
+<?php if($this->setting->provinsi_covid) : ?>
 <section id="covid-provinsi" class="py-2 bg-white">
 	<p class="font-weight-bold text-muted line line-short shimmer" data-name="wilayah"></p>
 	<div class="row">
