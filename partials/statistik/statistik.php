@@ -3,16 +3,18 @@
 <script type="text/javascript">
 	let chart;
 	const raw = Object.values(<?= json_encode($stat) ?>);
-	let chartType = 'pie';
+	const typechart = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
 	const legend = Boolean(!<?= ($tipe) ?>);
-	const categories = [];
-	const data = [];
-	let showStatus = true;
+	let categories = [];
+	let data = [];
+	let i = 1;
+	let status_tampilkan = true;
 	for (const stat of raw) {
 		if (stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH' && stat.nama != 'PENERIMA') {
 			let filteredData = [stat.nama, parseInt(stat.jumlah)];
-			categories.push(stat.nama);
+			categories.push(i);
 			data.push(filteredData);
+			i++;
 		}
 	}
 
@@ -32,54 +34,105 @@
 		else $('#tampilkan').text('Sembunyikan Nol');
 	}
 
-	function switchType(type){
-		chart.series[0].update({
-			type: type
+	function switchType(){
+		var chartType = chart_penduduk.series[0].type;
+		chart_penduduk.series[0].update({
+			type: (chartType === 'pie') ? 'column' : 'pie'
 		});
 	}
 
-	$(document).ready(function () {
-		showZeroValue(false);
-		chart = new Highcharts.Chart({
-			chart: {
-				renderTo: 'container'
-			},
-			title: 0,
-			yAxis: {
-				showEmpty: false,
-				title: {
-					text: 'Jumlah Populasi'
-				}
-			},
-			xAxis: {
-				categories: categories,
-			},
-			plotOptions: {
-				series: {
-					colorByPoint: true
-				},
-				column: {
-					pointPadding: -0.1,
-					borderWidth: 0,
-					showInLegend: false
-				},
-				pie: {
-					allowPointSelect: true,
-					cursor: 'pointer',
-					showInLegend: true
-				}
-			},
-			legend: {
-				enabled: legend
-			},
-			series: [{
-				type: chartType,
-				name: 'Jumlah Populasi',
-				shadow: 1,
-				border: 1,
-				data: data
-			}]
-		});
+		$(document).ready(function () {
+			showZeroValue(false);
+			if (<?=$this->setting->statistik_chart_3d?>) {
+				chart_penduduk = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container',
+						options3d: {
+							enabled: true,
+							alpha: 45
+						}
+					},
+					title: 0,
+					yAxis: {
+						showEmpty: false,
+						title: {
+							text: 'Jumlah Populasi'
+						}
+					},
+					xAxis: {
+						categories: categories,
+					},
+					plotOptions: {
+						series: {
+							colorByPoint: true
+						},
+						column: {
+							pointPadding: -0.1,
+							borderWidth: 0,
+							showInLegend: false,
+							depth: 45
+						},
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							showInLegend: true,
+							depth: 45,
+							innerSize: 70
+						}
+					},
+					legend: {
+						enabled: legend
+					},
+					series: [{
+						type: typechart,
+						name: 'Jumlah Populasi',
+						shadow: 1,
+						border: 1,
+						data: data
+					}]
+				});
+			} else {
+				chart_penduduk = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container'
+					},
+					title: 0,
+					yAxis: {
+						showEmpty: false,
+						title: {
+							text: 'Jumlah Populasi'
+						}
+					},
+					xAxis: {
+						categories: categories,
+					},
+					plotOptions: {
+						series: {
+							colorByPoint: true
+						},
+						column: {
+							pointPadding: -0.1,
+							borderWidth: 0,
+							showInLegend: false,
+						},
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							showInLegend: true,
+						}
+					},
+					legend: {
+						enabled: legend
+					},
+					series: [{
+						type: typechart,
+						name: 'Jumlah Populasi',
+						shadow: 1,
+						border: 1,
+						data: data
+					}]
+				});
+			}
 
 		$('#showData').click(function () {
 			$('tr.lebih').show();
