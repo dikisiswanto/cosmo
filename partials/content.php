@@ -13,13 +13,13 @@
 					<div class="col-12">
 						<h2 class="h3 font-weight-bold py-2 mb-0 judul-artikel d-inline-block border-bottom">Status COVID-19</h2>
 					</div>
-					<div class="col-lg-7 <?php config_item('covid_desa') and print('border-right pr-lg-4') ?> col-12">
-						<?php if(config_item('covid_data')) : ?>
+					<div class="col-lg-7 <?php $this->setting->covid_desa and print('border-right pr-lg-4') ?> col-12">
+						<?php if($this->setting->covid_data) : ?>
 						<?php $this->load->view($folder_themes . '/widgets/covid19') ?>
 						<?php endif ?>
 					</div>
-					<div class="<?= config_item('covid_data') ? 'col-lg-5 pl-lg-4' : 'col-lg-8' ?> col-12">
-						<?php if(config_item('covid_desa')) : ?>
+					<div class="<?= $this->setting->covid_data ? 'col-lg-5 pl-lg-4' : 'col-lg-8' ?> col-12">
+						<?php if($this->setting->covid_desa) : ?>
 							<?php $this->load->view($folder_themes . '/widgets/covid19_desa') ?>
 						<?php endif ?>
 					</div>
