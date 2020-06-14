@@ -3,18 +3,16 @@
 <script type="text/javascript">
 	let chart;
 	const raw = Object.values(<?= json_encode($stat) ?>);
-	const typechart = '<?= $tipe == 1 ? 'column' : 'pie' ?>';
-	const legend = Boolean(!<?= ($tipe) ?>);
-	let categories = [];
-	let data = [];
-	let i = 1;
-	let status_tampilkan = true;
+	const enable3d = <?= $this->setting->statistik_chart_3d ?> ? true: false;
+	let chartType = 'pie';
+	const categories = [];
+	const data = [];
+	let showStatus = true;
 	for (const stat of raw) {
 		if (stat.nama !== 'TOTAL' && stat.nama !== 'JUMLAH' && stat.nama != 'PENERIMA') {
 			let filteredData = [stat.nama, parseInt(stat.jumlah)];
-			categories.push(i);
+			categories.push(stat.nama);
 			data.push(filteredData);
-			i++;
 		}
 	}
 
@@ -34,105 +32,70 @@
 		else $('#tampilkan').text('Sembunyikan Nol');
 	}
 
-	function switchType(){
-		var chartType = chart_penduduk.series[0].type;
-		chart_penduduk.series[0].update({
-			type: (chartType === 'pie') ? 'column' : 'pie'
+	function switchType(type, alpha){
+		chart.update({
+			chart: {
+				options3d: {
+					alpha: alpha
+				}
+			},
+			series: [{
+				type: type
+			}]
 		});
 	}
 
-		$(document).ready(function () {
-			showZeroValue(false);
-			if (<?=$this->setting->statistik_chart_3d?>) {
-				chart_penduduk = new Highcharts.Chart({
-					chart: {
-						renderTo: 'container',
-						options3d: {
-							enabled: true,
-							alpha: 45
-						}
-					},
-					title: 0,
-					yAxis: {
-						showEmpty: false,
-						title: {
-							text: 'Jumlah Populasi'
-						}
-					},
-					xAxis: {
-						categories: categories,
-					},
-					plotOptions: {
-						series: {
-							colorByPoint: true
-						},
-						column: {
-							pointPadding: -0.1,
-							borderWidth: 0,
-							showInLegend: false,
-							depth: 45
-						},
-						pie: {
-							allowPointSelect: true,
-							cursor: 'pointer',
-							showInLegend: true,
-							depth: 45,
-							innerSize: 70
-						}
-					},
-					legend: {
-						enabled: legend
-					},
-					series: [{
-						type: typechart,
-						name: 'Jumlah Populasi',
-						shadow: 1,
-						border: 1,
-						data: data
-					}]
-				});
-			} else {
-				chart_penduduk = new Highcharts.Chart({
-					chart: {
-						renderTo: 'container'
-					},
-					title: 0,
-					yAxis: {
-						showEmpty: false,
-						title: {
-							text: 'Jumlah Populasi'
-						}
-					},
-					xAxis: {
-						categories: categories,
-					},
-					plotOptions: {
-						series: {
-							colorByPoint: true
-						},
-						column: {
-							pointPadding: -0.1,
-							borderWidth: 0,
-							showInLegend: false,
-						},
-						pie: {
-							allowPointSelect: true,
-							cursor: 'pointer',
-							showInLegend: true,
-						}
-					},
-					legend: {
-						enabled: legend
-					},
-					series: [{
-						type: typechart,
-						name: 'Jumlah Populasi',
-						shadow: 1,
-						border: 1,
-						data: data
-					}]
-				});
-			}
+	$(document).ready(function () {
+		showZeroValue(false);
+		chart = new Highcharts.Chart({
+			chart: {
+				renderTo: 'container',
+				options3d: {
+					enabled: enable3d,
+					alpha: 45,
+					beta: 10
+				}
+			},
+			title: 0,
+			yAxis: {
+				showEmpty: false,
+				title: {
+					text: 'Jumlah Populasi'
+				}
+			},
+			xAxis: {
+				categories: categories,
+			},
+			plotOptions: {
+				series: {
+					colorByPoint: true
+				},
+				column: {
+					pointPadding: -0.1,
+					borderWidth: 0,
+					showInLegend: false,
+					depth: 50,
+					viewDistance: 25
+				},
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					showInLegend: false,
+					depth: 30,
+					innerSize: 30,
+				}
+			},
+			legend: {
+				enabled: true
+			},
+			series: [{
+				type: chartType,
+				name: 'Jumlah Populasi',
+				shadow: 1,
+				border: 1,
+				data: data
+			}]
+		});
 
 		$('#showData').click(function () {
 			$('tr.lebih').show();
@@ -142,11 +105,12 @@
 
 		$('.btn-switch').click(function () {
 			chartType = $(this).data('type');
+			let alpha = chartType == 'pie' ? 45 : 20;
 			$(this).addClass('btn-primary');
 			$(this).removeClass('btn-default')
 			$(this).siblings('.btn').removeClass('btn-primary');
 			$(this).siblings('.btn').addClass('btn-default');
-			switchType(chartType);
+			switchType(chartType, alpha);
 		})
 
 	});
