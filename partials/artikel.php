@@ -85,13 +85,13 @@
 							<div id="share" class="my-5 mx-auto text-center"></div>
 							<section class="komentar py-4">
 								<?php $this->load->view($folder_themes .'/partials/komentar') ?>
-							</section>	
+							</section>
 						</div>
 					</div>
 					<aside class="col-lg-4 justify-content-end">
 						<div class="widget">
 							<?php $this->load->view($folder_themes .'/partials/widget') ?>
-						</div>	
+						</div>
 					</aside>
 				</div>
 			</div>
@@ -101,7 +101,7 @@
 <?php $this->load->view($folder_themes .'/commons/footer') ?>
 <script>
 		$("#share").jsSocials({
-				shares: ["email", "twitter", "facebook", "googleplus", "line", "whatsapp"],
+				shares: ["email", "twitter", "facebook", "line", "whatsapp"],
 				shareIn: 'blank'
 		});
 </script>

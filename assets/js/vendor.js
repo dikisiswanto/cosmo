@@ -26297,13 +26297,6 @@ Email : samson3d@gmail.com
 					}
 			},
 
-			googleplus: {
-					label: "+1",
-					logo: "fab fa-google",
-					shareUrl: "https://plus.google.com/share?url={url}",
-					countUrl: ""
-			},
-
 			linkedin: {
 					label: "Share",
 					logo: "fab fa-linkedin",
