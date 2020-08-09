@@ -20,7 +20,7 @@
 	<?php $this->load->view($folder_themes . '/commons/header') ?>
 	<?php $this->load->view($folder_themes . '/partials/map') ?>
 	<?php $this->load->view($folder_themes . '/commons/footer') ?>
-	<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.js") ?>"></script>
+	<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.js?v2.0-beta")?>"></script>
 </body>
 
 </html>
