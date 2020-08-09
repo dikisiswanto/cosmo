@@ -5,19 +5,20 @@
 <head>
 	<?php $this->load->view($folder_themes . '/commons/meta') ?>
 	<?php $this->load->view($folder_themes . '/commons/source_css') ?>
-	<?php $this->load->view($folder_themes . '/commons/source_js') ?>
 </head>
 <body>
-	<div id="loader">
-		<div class="folding-cube">
-			<div class="sk-cube1 cube"></div>
-			<div class="cube2 cube"></div>
-			<div class="cube4 cube"></div>
-			<div class="cube3 cube"></div>
-		</div>
-	</div>
 	<?php if($single_artikel['id']) : ?>
-		<?php $this->load->view($folder_themes . '/partials/artikel') ?>
+		<?php $this->load->view($folder_themes .'/commons/header') ?>
+		<?php $this->load->view($folder_themes .'/partials/newsticker') ?>
+		<section class="main-wrapper">
+			<main class="content">
+				<?php $this->load->view($folder_themes .'/partials/article.php') ?>
+			</main>
+			<?php $this->load->view($folder_themes .'/partials/sidebar.php') ?>
+		</section>
+		<?php $this->load->view($folder_themes .'/commons/footer') ?>
+		<?php $this->load->view($folder_themes . '/commons/source_js') ?>
+
 		<?php else : ?>
 			<?php $this->load->view($folder_themes . '/commons/404') ?>
 	<?php endif ?>

@@ -1,41 +1,23 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<?php if($transparansi) $this->load->view($folder_themes . '/partials/apbdesa', $transparansi) ?>
+<?php if($transparansi) $this->load->view($folder_themes .'/partials/apbdesa', $transparansi) ?>
 
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="logo">
-				<img src="<?= gambar_desa($desa['logo']) ?>" alt="<?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>" class="img-fluid">
-				</div>
-				<div class="detail">
-					<span>
-						Pemerintah <?= ucfirst($this->setting->sebutan_desa).' '.ucwords($desa['nama_desa']) ?>
-					</span>
-					<span>
-						<?= ucfirst($this->setting->sebutan_kecamatan_singkat) ?>
-						<?= ucwords($desa['nama_kecamatan']) ?>
-						<?= ucfirst($this->setting->sebutan_kabupaten_singkat) ?>
-						<?= ucwords($desa['nama_kabupaten']) ?>,
-						<?= ucwords($data_config['nama_propinsi']) ?>,
-						Indonesia
-					</span>
-				</div>
-				<div class="col-12 mt-3 mb-0">
-					<a href="<?= site_url('siteman') ?>" class="font-weight-bold" style="letter-spacing: 1px">LOGIN ADMIN</a>
-				</div>
-				<div class="copyright mt-3">
-					<span>&copy; <?= date('Y') ?> - Hak Cipta dilindungi Undang-Undang.</span>
-					<span>Tema <a href="https://github.com/dikisiswanto/OpenSID-Cosmos/">Cosmos</a> oleh <a href="https://dikisiswanto.github.io">Diki Siswanto</a></span>
-					<span>Ditenagai oleh <a href="https://github.com/OpenSID/OpenSID">OpenSID</a> <?= AmbilVersi(); ?> yang dikembangkan oleh <a href="https://www.facebook.com/groups/OpenSID/">Komunitas OpenSID</a></span>
-				</div>
-			</div>
+<!-- ANDA TIDAK DIPERKENANKAN MENGHAPUS/MEMODIFIKASI LINK KREDIT DI BAWAH INI. -->
+<!-- Dengan tetap mencantumkan link kredit, berarti Anda turut mendukung dan mengapresiasi pengembang tema. -->
+<footer class="footer">
+	<div class="footer__content">
+		<div class="footer__copyright">
+			<span>Copyright &copy; <?= date('Y') ?> - <a href="https://github.com/dikisiswanto/cosmo" target="_blank"><strong>tema cosmo</strong></a> | <a href="https://github.com/opensid/opensid/"><strong>OpenSID</strong></a></span>
 		</div>
+		<ul class="social-media">
+			<?php foreach($sosmed as $data) : ?>
+				<?php if(!empty($data['link'])) : ?>
+					<?php $brand = strtolower(str_replace(' ', '-', $data['nama'])) ?>
+					<li class="social-media__item social-media--<?= $brand ?>">
+						<a href="<?= $data['link'] ?>" class="social-media__link"><i class="fa fa-<?= $brand == 'youtube' ? 'youtube-play' : $brand ?>"></i></a>
+					</li>
+				<?php endif ?>
+			<?php endforeach ?>
+		</ul>
 	</div>
 </footer>
-<div id="kembali-ke-atas">
-	<a href="#" class="tombol-ke-atas hide" title="Kembali ke atas">
-		<i class="fa fa-arrow-up"></i>
-	</a>
-</div>

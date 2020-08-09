@@ -5,49 +5,38 @@
 <head>
 	<?php $this->load->view($folder_themes . '/commons/meta') ?>
 	<?php $this->load->view($folder_themes . '/commons/source_css') ?>
-	<?php $this->load->view($folder_themes . '/commons/source_js') ?>
 </head>
-<body>
-	<div id="loader">
-		<div class="folding-cube">
-			<div class="sk-cube1 cube"></div>
-			<div class="cube2 cube"></div>
-			<div class="cube4 cube"></div>
-			<div class="cube3 cube"></div>
-		</div>
-	</div>
+<body data-theme="light">
+
 	<?php $this->load->view($folder_themes . '/commons/header') ?>
-	<?php $this->load->view($folder_themes . '/commons/nav') ?>
-	<section id="main-content">
-		<main>
-			<div class="container">
-				<div class="col-12 px-0">
-					<div class="row m-0 justify-content-between">
-						<div class="col-lg-8 bg-white justify-content-start">
-						<?php
-							if($tipe == 2){
-								if($tipex==1){
-									$this->load->view($folder_themes.'/partials/statistik/statistik_sos');
-								}
-							}elseif($tipe == 3){
-								$this->load->view($folder_themes.'/partials/statistik/wilayah');
-							}elseif($tipe == 4){
-								$this->load->view($folder_themes.'/partials/statistik/dpt');
-							}else{
-								$this->load->view($folder_themes.'/partials/statistik/statistik');
-							}
-						?>
-						</div>
-						<aside class="col-lg-4 justify-content-end">
-							<div class="widget">
-								<?php $this->load->view($folder_themes .'/partials/widget') ?>
-							</div>	
-						</aside>
-					</div>
-				</div>
-			</div>
+	<?php $this->load->view($folder_themes .'/partials/newsticker') ?>
+
+	<script>
+		const enable3d = <?=$this->setting->statistik_chart_3d ?> ? true : false;
+	</script>
+
+	<section class="main-wrapper">
+		<main class="content">
+			<?php 
+				switch ($tipe) {
+					case '0':
+						$page = '/partials/statistics/default';
+						break;
+					case '3':
+						$page = '/partials/statistics/regions';
+						break;
+					case '4':
+						$page = '/partials/statistics/voters';
+					default:
+						$page = '/commons/404';
+						break;
+				}
+			?>
+			<?php $this->load->view($folder_themes . $page) ?>
 		</main>
+		<?php $this->load->view($folder_themes .'/partials/sidebar.php') ?>
 	</section>
-	<?php $this->load->view($folder_themes . '/commons/footer') ?>
+	<?php $this->load->view($folder_themes .'/commons/footer') ?>
+	<?php $this->load->view($folder_themes . '/commons/source_js') ?>
 </body>
 </html>
