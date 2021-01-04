@@ -8,5 +8,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.min.js?v2.0-beta")?>"></script>
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.min.js?" . THEME_VERSION)?>"></script>
 <?php $this->load->view('head_tags_front') ?>

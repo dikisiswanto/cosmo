@@ -6,6 +6,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+/*! tema cosmo | MIT License | 2020 - Diki Siswanto | https://github.com/dikisiswanto/cosmo */
 var showStatus = true;
 var charts;
 
@@ -177,12 +178,15 @@ $(document).ready(function () {
     arrows: false,
     focusOnSelect: true
   });
-  $('.newsticker__list').marquee({
-    duration: 5000,
-    gap: 50,
-    pauseOnHover: true,
-    speed: 150
-  });
+
+  if ($('.newsticker')) {
+    $('.newsticker__list').marquee({
+      gap: 50,
+      pauseOnHover: true,
+      speed: 150
+    });
+  }
+
   var activeElem = $('.nav-tabs>li:first-child').find('a').attr('href');
   $('.nav-tabs>li:first-child').find('a').addClass('active show');
   $('#arsip_artikel .tab-content div:first-child').addClass('active show');

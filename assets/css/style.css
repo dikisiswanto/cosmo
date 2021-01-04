@@ -1010,7 +1010,7 @@ video {
         }
 
 .nav__link {
-    display: inline-block;
+    display: block;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     padding-left: 1rem;
@@ -1018,6 +1018,13 @@ video {
     transition-property: all;
     transition-duration: 300ms;
   }
+
+@media (min-width: 1024px) {
+
+.nav__link {
+      display: inline-block
+  }
+    }
 
 .nav__link .fa {
       transition-property: all;
@@ -2597,6 +2604,10 @@ video {
   overflow-x: hidden;
 }
 
+.map #map {
+    z-index: 10;
+  }
+
 .sidebar__item+.sidebar__item {
     margin-top: 1rem;
   }
@@ -2859,22 +2870,22 @@ video {
 
 /* For self service */
 
-.sidebar__item .box input {
-      height: 2.5rem;
-      width: 100%;
-      border-radius: 0.25rem;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      border-width: 1px;
-      --border-opacity: 1;
-      border-color: #e2e8f0;
-      border-color: rgba(226, 232, 240, var(--border-opacity));
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      margin-top: 0.25rem;
-      margin-bottom: 0.25rem;
-      transition-property: all;
-      transition-duration: 200ms;
-    }
+.sidebar__item .box input[type=text], .sidebar__item .box input[type=password] {
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 0.25rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        border-width: 1px;
+        --border-opacity: 1;
+        border-color: #e2e8f0;
+        border-color: rgba(226, 232, 240, var(--border-opacity));
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        transition-property: all;
+        transition-duration: 200ms;
+      }
 
 .sidebar__item .box input:first-child {
         margin-top: 0.75rem;

@@ -13,6 +13,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.1.1/highcharts.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.1.1/highcharts-3d.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
@@ -20,7 +22,12 @@
 	<?php $this->load->view($folder_themes . '/commons/header') ?>
 	<?php $this->load->view($folder_themes . '/partials/map') ?>
 	<?php $this->load->view($folder_themes . '/commons/footer') ?>
-	<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.min.js?v2.0-beta")?>"></script>
+	<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/script.min.js?" . THEME_VERSION)?>"></script>
+	<script>
+		$('.fetched-data').on('DOMNodeInserted', 'link[rel=stylesheet]', function () {
+			$(this).remove();
+		});
+	</script>
 </body>
 
 </html>

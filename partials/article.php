@@ -48,6 +48,17 @@
 		</li>
 	</ul>
 </div>
+<h5 class="content__title">Komentar</h5>
+<ul class="--mt-4 content__list">
+	<?php foreach($komentar as $comment) : ?>
+		<li class="--mt-2 --mb-2">
+			<span><i class="fa fa-user --mx-2"></i> <?= $comment['owner'] ?></span>
+			<p><i class="fa fa-comment-o --mx-2"></i> <?= $comment['komentar'] ?></p>
+			<span><i class="fa fa-calendar --mx-2"></i> <?= $comment['tgl_upload'] ?></span>
+		</li>
+		<hr/>
+	<?php endforeach ?>
+</ul>
 <?php if($article['boleh_komentar'] == 1) : ?>
 	<div class="--mt-4">
 		<div id="disqus_thread"></div>
