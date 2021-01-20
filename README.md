@@ -2,6 +2,8 @@
 [![GitHub release](https://img.shields.io/github/release/dikisiswanto/cosmo.svg)](#!)
 [![GitHub](https://img.shields.io/github/license/dikisiswanto/cosmo.svg)](#!)
 
+<img src="https://i.ibb.co/MNdw81Z/cosmo.png" alt="cosmo" border="0" width="100%" height="auto">
+
 **Cosmo** ([https://github.com/dikisiswanto/cosmo/](https://github.com/dikisiswanto/cosmo/)) adalah tema atau tampilan modul web dari aplikasi OpenSID yang minimalis dan responsif. Tema **cosmo** adalah hasil *rebranding* sekaligus penerus dari tema Cosmos.
 
 ## Instalasi
