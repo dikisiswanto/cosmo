@@ -1,0 +1,7 @@
+/* Ubah warna tema */
+/* Warna di bawah ini adalah default, silakan diubah nilai warnanya sesuai selera */
+:root {
+	--primary-color: #440a67;
+	--secondary-color: #93329e;
+	--tertiary-color: #435560;
+}
