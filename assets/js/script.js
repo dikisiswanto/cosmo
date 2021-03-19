@@ -222,4 +222,6 @@ $(document).ready(function () {
   $('.button--menu').click(function () {
     $('.nav').toggleClass('nav--opened');
   });
+  $('.content__article style').remove();
+  $('.content__article link[rel=stylesheet]').remove();
 });

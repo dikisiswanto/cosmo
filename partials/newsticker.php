@@ -1,20 +1,20 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <?php if($teks_berjalan) : ?>
-	<div class="newsticker">
+	<div class="newsticker" style="padding-bottom: 0">
 		<div class="newsticker__label">
 			<i class="fa fa-bullhorn"></i>
 			<span>Info</span>
 		</div>
-		<ul class="newsticker__list">
+		<marquee class="newsticker__lists" onmouseover="this.stop();" onmouseout="this.start();">
 			<?php foreach($teks_berjalan as $newsticker) : ?>
-				<li class="newsticker__item">
+				<span class="newsticker__item" style="padding-right: 1.5rem">
 					<?= $newsticker['teks'] ?>
 					<?php if($newsticker['tautan']) : ?>
 					<a href="<?= $newsticker['tautan'] ?>" class="newsticker__link"><?= $newsticker['judul_tautan']?></a>
 					<?php endif ?>
-				</li>
+				</span>
 			<?php endforeach ?>
-		</ul>
+		</marquee>
 	</div>
 <?php endif ?>

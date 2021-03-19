@@ -5,6 +5,9 @@
 		<input type="search" name="cari" class="form__input" placeholder="Cari...">
 		<i class="fa fa-search form__icon"></i>
 	</form>
+	<div class="sidebar__item">
+  	<?php $this->load->view($folder_themes .'/widgets/layanan_mandiri') ?>
+	</div>
 	<?php foreach($w_cos as $widget) : ?>
 		<?php if ($widget["jenis_widget"] == 1): ?>
 			<?php if($widget['isi'] == 'keuangan.php') : ?>

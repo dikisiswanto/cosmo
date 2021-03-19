@@ -1,6 +1,6 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<?php defined('THEME_VERSION') or define('THEME_VERSION', 'v2.0') ?>
+<?php defined('THEME_VERSION') or define('THEME_VERSION', 'v2.1') ?>
 
 <?php $desa_title = trim(ucwords($this->setting->sebutan_desa) . ' ' . $desa['nama_desa']); ?>
 
@@ -12,7 +12,7 @@
 <meta name='designer' content='Diki Siswanto'/>
 <meta name='theme:designer' content='Diki Siswanto' />
 <meta name='theme:version' content='<?= THEME_VERSION ?>' />
-<meta name="theme-color" content="#2E86AB">
+<meta name="theme-color" content="#efefef">
 <meta name='keywords' content="sid, sistem informasi desa, web, blog, informasi, website, tema cosmo, desa, kecamatan, kabupaten, indonesia, kampung, <?= $desa['nama_desa']; ?>, <?= $desa['nama_kecamatan']; ?>, <?= $desa['nama_kabupaten']; ?>, website resmi <?= $desa['nama_desa']; ?>" />
 <meta property="og:site_name" content="<?= $desa_title ?>"/>
 <meta property="og:type" content="article"/>
