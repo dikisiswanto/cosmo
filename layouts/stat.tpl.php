@@ -27,6 +27,7 @@
 						break;
 					case '4':
 						$page = '/partials/statistics/voters';
+						break;
 					default:
 						$page = '/commons/404';
 						break;
