@@ -27,4 +27,4 @@ Jika repository ini dirasa bermanfaat, mohon kesediaannya memberi bintang ⭐
 
 ## Tema OpenSID Lainnya
 
-<a href="https://silirdev.com/2021/04/tema-silir-tema-premium-untuk-website-desa-opensid/" target="_blank" rel="noopener noreferrer" ><img src="https://silirdev.com/wp-content/uploads/2021/04/silir-post-1130x778.png" alt="tema premium opensid, tema silir"/></a>
+<a href="https://silirdev.com/2021/04/tema-silir-tema-premium-untuk-website-desa-opensid/" target="_blank" rel="noopener noreferrer" ><img src="https://silirdev.com/wp-content/uploads/2021/04/tema-silir-post.png" alt="tema premium opensid, tema silir"/></a>
