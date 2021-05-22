@@ -64,7 +64,7 @@
 <link rel="shortcut icon" href="<?= base_url('favicon.ico')?>" />
 <?php endif; ?>
 <noscript>
-	You must have JavaScript enabled in order to use this theme. Please enable JavaScript and then reload this page in order to continue.
+  You must have JavaScript enabled in order to use this theme. Please enable JavaScript and then reload this page in order to continue.
 </noscript>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
