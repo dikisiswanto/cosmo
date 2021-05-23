@@ -1,6 +1,6 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<h2 class="content__heading">Arsip Konten Situs Web Sukaraya</h2>
+<h2 class="content__heading">Arsip Konten</h2>
 <hr class="--mt-2 --mb-2">
 
 <section class="content__article">
