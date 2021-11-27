@@ -27,4 +27,6 @@ Jika repository ini dirasa bermanfaat, mohon kesediaannya memberi bintang ⭐
 
 ## Tema OpenSID Lainnya
 
+<a href="https://www.trivusi.web.id/2021/11/tema-opensid-gratis-dan-keren-untuk-website-desa.html" target="_blank" rel="noopener noreferrer" ><img src="https://blogger.googleusercontent.com/img/a/AVvXsEi-3I1A3UsFLdmtBFIGYBK3q_HQ3kacoC6Qa04eWmBiciZGWvrIFQ5TsYYUWbcBNqtCraAaLTeHqBq1GBPje8OxwSigYa_6q5i2Bw0dxBunhFfkrCb0RPgYwjUOdbdIsGZl_csea_c0a_qEg0vv9LM5OA0JP96zAleLA14ynalEo0BxYd4PDwx3rszoFg=s1024" alt="tema opensid gratis menawan dan responsive"/></a>
+
 <a href="https://silirdev.com/2021/04/tema-silir-tema-premium-untuk-website-desa-opensid/" target="_blank" rel="noopener noreferrer" ><img src="https://silirdev.com/wp-content/uploads/2021/04/tema-silir-post.png" alt="tema premium opensid, tema silir"/></a>
