@@ -2,7 +2,7 @@
 [![GitHub release](https://img.shields.io/github/release/dikisiswanto/cosmo.svg)](#!)
 [![GitHub](https://img.shields.io/github/license/dikisiswanto/cosmo.svg)](#!)
 
-> **Perhatian:** Tema ini tidak lagi aktif diperbarui secara rutin dan mungkin tidak lagi kompatibel dengan versi OpenSID terkini. Silakan gunakan [tema esensi](https://github.com/OpenSID/tema-esensi) sebagai alternatif.
+> **Perhatian:** Tema ini tidak diperbarui secara rutin dan mungkin tidak lagi kompatibel dengan versi OpenSID terkini. Silakan gunakan [tema esensi](https://github.com/OpenSID/tema-esensi) sebagai alternatif.
 
 <img src="https://i.ibb.co/MNdw81Z/cosmo.png" alt="cosmo" border="0" width="100%" height="auto">
 
